@@ -25,7 +25,7 @@
 ***************************/
 #define SCH_CMD_MID                    0x1895 /**< \brief SCH Ground Commands Message ID */
 #define SCH_SEND_HK_MID                0x1896 /**< \brief SCH Send Housekeeping Message ID */
-#define SCH_UNUSED_MID                 0x1897 /**< \brief SCH MDT Unused Message Message ID */
+#define SCH_UNUSED_MID                 (CFE_SB_HIGHEST_VALID_MSGID+1) /**< \brief SCH MDT Unused Message Message ID */
 /*
 #define SCH_SPARE1                     0x1898
 #define SCH_SPARE2                     0x1899
