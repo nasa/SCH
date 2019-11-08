@@ -110,7 +110,7 @@
 **       Must be at least large enough to hold the smallest possible message header 
 * **     (see #CFE_SB_TLM_HDR_SIZE and #CFE_SB_CMD_HDR_SIZE)
 */
-#define SCH_MAX_MSG_WORDS      64   /* max message length (in words) */
+#define SCH_MAX_MSG_WORDS      62   /* max message length (in words) */
 
 
 /*

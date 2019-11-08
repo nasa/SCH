@@ -53,7 +53,11 @@ typedef struct
 */
 typedef struct
 {
-    uint16   MessageBuffer[SCH_MAX_MSG_WORDS]; /**< \brief Packed Messages */
+
+   CFE_SB_MsgId_t mid;                       /**< \brief MID to send */
+   uint16    cmdCode;                         /**< \brief Specifies the command code if relevant. */
+   uint16   payloadLength;                   /**< \brief Message length of any user payload. */
+   uint16   MessageBuffer[SCH_MAX_MSG_WORDS]; /**< \brief User payload content byte-stream. */
 
 } SCH_MessageEntry_t;
 

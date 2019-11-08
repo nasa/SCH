@@ -45,6 +45,8 @@
 #include "sch_verify.h"
 #include "cfe_platform_cfg.h" /* for CFE_SB_HIGHEST_VALID_MSGID */
 
+uint8 CFE_SB_GetPktType(CFE_SB_MsgId_t MsgId);
+
 /*************************************************************************
 **
 ** Macro definitions
@@ -1166,7 +1168,8 @@ int32 SCH_ValidateMessageData(void *TableData)
     uint16         *MessageBuffer;
     uint16         *UserDataPtr;
 
-    uint16          MessageLength;
+    uint16          PayloadLength;
+    uint16           CmdCode;
     CFE_SB_MsgId_t  MessageID;
     CFE_SB_MsgId_t  MaxValue = (CFE_SB_MsgId_t) SCH_MDT_MAX_MSG_ID;
     CFE_SB_MsgId_t  MinValue = (CFE_SB_MsgId_t) SCH_MDT_MIN_MSG_ID;
@@ -1184,8 +1187,9 @@ int32 SCH_ValidateMessageData(void *TableData)
         BufferIndex = 0;
 
         MessageBuffer = &TableArray[TableIndex].MessageBuffer[0];
-        MessageID     = CFE_SB_GetMsgId((CFE_SB_MsgPtr_t) MessageBuffer);
-        MessageLength = CFE_SB_GetTotalMsgLength((CFE_SB_MsgPtr_t) MessageBuffer);
+        MessageID     = TableArray[TableIndex].mid;
+        CmdCode       = TableArray[TableIndex].cmdCode;
+        PayloadLength = TableArray[TableIndex].payloadLength;
 
         if (MessageID == SCH_UNUSED_MID)
         {
@@ -1193,8 +1197,8 @@ int32 SCH_ValidateMessageData(void *TableData)
             ** If message ID is unused, then look for junk in user data portion
             */
             UnusedCount++;
-            UserDataPtr = (uint16 *)CFE_SB_GetUserData((CFE_SB_MsgPtr_t) MessageBuffer);
-            while (UserDataPtr < &TableArray[TableIndex+1].MessageBuffer[0])
+            UserDataPtr = &MessageBuffer[0];
+            while (UserDataPtr <= &TableArray[TableIndex].MessageBuffer[SCH_MAX_MSG_WORDS-1])
             {
                 if (*UserDataPtr != SCH_UNUSED)
                 {
@@ -1212,16 +1216,31 @@ int32 SCH_ValidateMessageData(void *TableData)
             /*
             ** If message ID is valid, then check message length
             */
-            if ((MessageLength > (SCH_MAX_MSG_WORDS * 2)) ||
-                (MessageLength < (SCH_MIN_MSG_WORDS * 2)) ||
-               ((MessageLength & 1) != 0))
+            if (PayloadLength > SCH_MAX_MSG_WORDS*2)
             {
                 EntryResult = SCH_MDT_INVALID_LENGTH;
                 BadCount++;
             }
             else
             {
-                GoodCount++;
+               GoodCount++;
+               // Populate the CCSDS header and move the message content into the proper user data space.
+               uint16 TempBuffer[SCH_MAX_MSG_WORDS];
+               if(PayloadLength > 0) {
+                  CFE_PSP_MemCpy( TempBuffer, MessageBuffer, PayloadLength );
+               }
+
+               if ( CFE_SB_GetPktType( MessageID ) == 1 )
+               {
+                  CFE_SB_InitMsg( MessageBuffer, MessageID, sizeof(CCSDS_CommandPacket_t) + PayloadLength, TRUE );
+                  CFE_SB_SetCmdCode( (CFE_SB_MsgPtr_t) MessageBuffer, CmdCode );
+                  CFE_PSP_MemCpy( MessageBuffer + sizeof(CCSDS_CommandPacket_t), TempBuffer, PayloadLength );
+               }
+               else
+               {
+                  CFE_SB_InitMsg( MessageBuffer, MessageID, sizeof(CCSDS_TelemetryPacket_t) + PayloadLength, TRUE );
+                  CFE_PSP_MemCpy( MessageBuffer + sizeof(CCSDS_TelemetryPacket_t), TempBuffer, PayloadLength );
+               }
             }
         }
         else
@@ -1239,7 +1258,7 @@ int32 SCH_ValidateMessageData(void *TableData)
 
             CFE_EVS_SendEvent(SCH_MESSAGE_TBL_ERR_EID, CFE_EVS_ERROR,
                               "Message tbl verify err - idx[%d] mid[0x%X] len[%d] buf[%d]",
-                              (int)TableIndex, MessageID, MessageLength, (int)BufferIndex);
+                              (int)TableIndex, MessageID, PayloadLength, (int)BufferIndex);
         }
     }
 
