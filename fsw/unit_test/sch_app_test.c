@@ -28,11 +28,11 @@
 #include "ut_osapi_stubs.h"
 #include "ut_cfe_es_stubs.h"
 #include "ut_cfe_es_hooks.h"
-// FIXME: these need to be implemented/updated in UT-Assert (by copying from sch_test_utils.c/.h):
-//#include "ut_cfe_evs_stubs.h"
-//#include "ut_cfe_time_stubs.h"
-//#include "ut_ostimer_stubs.h"
-//#include "ut_cfe_sb_stubs.h"
+/* FIXME: these need to be implemented/updated in UT-Assert (by copying from sch_test_utils.c/.h): */
+/* #include "ut_cfe_evs_stubs.h" */
+/* #include "ut_cfe_time_stubs.h" */
+/* #include "ut_ostimer_stubs.h" */
+/* #include "ut_cfe_sb_stubs.h" */
 #include "ut_cfe_psp_memutils_stubs.h"
 #include "ut_cfe_psp_watchdog_stubs.h"
 #include "ut_cfe_psp_timer_stubs.h"

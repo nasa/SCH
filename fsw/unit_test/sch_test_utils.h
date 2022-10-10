@@ -18,10 +18,10 @@
 
 #include "sch_app.h"
 #include "ut_cfe_evs_hooks.h"
-// FIXME: these need to be implemented/updated in UT-Assert (by copying from sch_test_utils.c/.h):
-//#include "ut_cfe_evs_stubs.h"
-//#include "ut_cfe_time_stubs.h"
-//#include "ut_ostimer_stubs.h"
+/* FIXME: these need to be implemented/updated in UT-Assert (by copying from sch_test_utils.c/.h): */
+/* #include "ut_cfe_evs_stubs.h" */
+/* #include "ut_cfe_time_stubs.h" */
+/* #include "ut_ostimer_stubs.h" */
 #include "ut_cfe_sb_stubs.h"
 #include "ut_cfe_sb_hooks.h"
 #include "ut_cfe_time_hooks.h"
