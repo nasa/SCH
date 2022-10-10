@@ -55,7 +55,6 @@
 typedef struct
 {
     uint8             CmdHeader[CFE_SB_CMD_HDR_SIZE];  /**< \brief cFE Software Bus Command Message Header */
-
 } SCH_NoArgsCmd_t;
 
 /*
@@ -74,7 +73,6 @@ typedef struct
                                                       /**< \details Valid Range is zero to (#SCH_TOTAL_SLOTS - 1) */
     uint16   EntryNumber;                             /**< \brief Entry Number of Activity whose state is to change
                                                            \details Valid Range is zero to (#SCH_ENTRIES_PER_SLOT - 1) */
-
 } SCH_EntryCmd_t;
 
 /*

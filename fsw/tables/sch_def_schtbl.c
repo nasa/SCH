@@ -77,7 +77,6 @@
 */
 SCH_ScheduleEntry_t SCH_DefaultScheduleTable[SCH_TABLE_ENTRIES] =
 {
-
 /*
 ** Structure definition...
 **

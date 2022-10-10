@@ -230,7 +230,6 @@ typedef struct
     boolean               IgnoreMajorFrame;              /**< \brief Major Frame too noisy to trust */
     boolean               IgnoreMajorFrameMsgSent;       /**< \brief Major Frame Event Message has been sent */
     boolean               UnexpectedMajorFrame;          /**< \brief Major Frame signal was unexpected */
-
 } SCH_AppData_t;
 
 /*************************************************************************

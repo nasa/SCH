@@ -265,7 +265,6 @@ void SCH_AppMain(void)
     ** Let cFE kill the task (and any child tasks)
     */
     CFE_ES_ExitApp(RunStatus);
-
 } /* End of SH_AppMain() */
 
 
@@ -351,7 +350,6 @@ int32 SCH_AppInit(void)
                                SCH_MISSION_REV);
  
     return(Status);
-
 } /* End of SCH_AppInit() */
 
 
@@ -391,7 +389,6 @@ int32 SCH_EvsInit(void)
     }
 
     return(Status);
-    
 } /* End of SCH_EvsInit() */
 
 
@@ -455,7 +452,6 @@ int32 SCH_SbInit(void)
     }
 
     return(Status);
-    
 } /* End of SCH_SbInit() */
 
 
@@ -568,7 +564,6 @@ int32 SCH_TblInit(void)
     }
 
     return(Status);
-
 } /* End of SCH_TblInit() */
 
 
@@ -648,7 +643,6 @@ int32 SCH_TimerInit(void)
     }
     
     return(Status);
-    
 } /* End of SCH_TimerInit() */
 
 
@@ -809,7 +803,6 @@ int32 SCH_ProcessScheduleTable(void)
     }
 
     return(Result);
-
 } /* End of SCH_ProcessScheduleTable() */
 
 
@@ -871,7 +864,6 @@ int32 SCH_ProcessNextSlot(void)
     SCH_AppData.SlotsProcessedCount++;
 
     return(Result);
-
 } /* End of SCH_ProcessNextSlot() */
 
 
@@ -965,7 +957,6 @@ void SCH_ProcessNextEntry(SCH_ScheduleEntry_t *NextEntry, int32 EntryNumber)
     }
 
     return;
-
 } /* End of SCH_ProcessNextEntry() */
 
 
@@ -1002,7 +993,6 @@ int32 SCH_ProcessCommands(void)
     }
 
     return(Status);
-
 } /* End of SCH_ProcessCommands() */
 
 
@@ -1143,7 +1133,6 @@ int32 SCH_ValidateScheduleData(void *TableData)
     }
 
     return(TableResult);
-
 } /* End of SCH_ValidateScheduleData() */
 
 
@@ -1262,7 +1251,6 @@ int32 SCH_ValidateMessageData(void *TableData)
     }
 
     return(TableResult);
-
 } /* End of SCH_ValidateMessageData() */
 
 

@@ -45,7 +45,6 @@ typedef struct
     uint16   MessageIndex;         /**< \brief Byte index into Message Definition Table */
 
     uint32   GroupData;            /**< \brief Group and Multi-Group membership definitions */
-
 } SCH_ScheduleEntry_t;
 
 /*
@@ -54,7 +53,6 @@ typedef struct
 typedef struct
 {
     uint16   MessageBuffer[SCH_MAX_MSG_WORDS]; /**< \brief Packed Messages */
-
 } SCH_MessageEntry_t;
 
 
