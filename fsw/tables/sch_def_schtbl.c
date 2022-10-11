@@ -77,7 +77,6 @@
 */
 SCH_ScheduleEntry_t SCH_DefaultScheduleTable[SCH_TABLE_ENTRIES] =
 {
-
 /*
 ** Structure definition...
 **
@@ -853,8 +852,3 @@ CFE_TBL_FILEDEF(SCH_DefaultScheduleTable, SCH.SCHED_DEF, SCH schedule table, sch
 /*
 ** (none)
 */
-
-/************************/
-/*  End of File Comment */
-/************************/
-

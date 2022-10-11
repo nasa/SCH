@@ -707,7 +707,3 @@
 #define SCH_CMD_LEN_ERR_EID                  60
 
 #endif /* _sch_events_ */
-
-/************************/
-/*  End of File Comment */
-/************************/

@@ -57,9 +57,6 @@ extern SCH_AppData_t           SCH_AppData;
 */
 
 /*******************************************************************
-**
-** SCH_AppPipe
-**
 ** NOTE: For complete prolog information, see 'sch_cmds.h'
 ********************************************************************/
 
@@ -143,14 +140,10 @@ int32 SCH_AppPipe(CFE_SB_MsgPtr_t MessagePtr)
     }
 
     return(Result);
-
-} /* End of SCH_AppPipe() */
+}
 
 
 /*******************************************************************
-**
-** SCH_HousekeepingCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -215,14 +208,10 @@ int32 SCH_HousekeepingCmd(CFE_SB_MsgPtr_t MessagePtr)
     TableResult = SCH_AcquirePointers();
 
     return(TableResult);
-
-} /* End of SCH_HousekeepingCmd() */
+}
 
 
 /*******************************************************************
-**
-** SCH_NoopCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -248,14 +237,10 @@ void SCH_NoopCmd(CFE_SB_MsgPtr_t MessagePtr)
     }
 
     return;
-
-} /* End of SCH_NoopCmd() */
+}
 
 
 /*******************************************************************
-**
-** SCH_ResetCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -294,14 +279,10 @@ void SCH_ResetCmd(CFE_SB_MsgPtr_t MessagePtr)
     }
 
     return;
-
-} /* End of SCH_ResetCmd() */
+}
 
 
 /*******************************************************************
-**
-** SCH_EnableCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -364,14 +345,10 @@ void SCH_EnableCmd(CFE_SB_MsgPtr_t MessagePtr)
     SCH_PostCommandResult(GoodCommand);
 
     return;
-
-} /* End of SCH_EnableCmd() */
+}
 
 
 /*******************************************************************
-**
-** SCH_DisableCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -434,14 +411,10 @@ void SCH_DisableCmd(CFE_SB_MsgPtr_t MessagePtr)
     SCH_PostCommandResult(GoodCommand);
 
     return;
-
-} /* End of SCH_DisableCmd() */
+}
 
 
 /*******************************************************************
-**
-** SCH_EnableGroupCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -525,14 +498,10 @@ void SCH_EnableGroupCmd(CFE_SB_MsgPtr_t MessagePtr)
     SCH_PostCommandResult(GoodCommand);
 
     return;
-
-} /* End of SCH_EnableGroupCmd() */
+}
 
 
 /*******************************************************************
-**
-** SCH_DisableGroupCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -616,14 +585,10 @@ void SCH_DisableGroupCmd(CFE_SB_MsgPtr_t MessagePtr)
     SCH_PostCommandResult(GoodCommand);
 
     return;
-
-} /* End of SCH_DisableGroupCmd() */
+}
 
 
 /*******************************************************************
-**
-** SCH_EnableSyncCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -646,16 +611,12 @@ void SCH_EnableSyncCmd(CFE_SB_MsgPtr_t MessagePtr)
     SCH_PostCommandResult(GoodCommand);
 
     return;
-
-} /* End of SCH_EnableSyncCmd() */
+}
 
 
 
 
 /*******************************************************************
-**
-** SCH_SendDiagTlmCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -710,14 +671,10 @@ void SCH_SendDiagTlmCmd(CFE_SB_MsgPtr_t MessagePtr)
     SCH_PostCommandResult(GoodCommand);
 
     return;
-
-} /* End of SCH_SendDiagTlmCmd() */
+}
 
 
 /*******************************************************************
-**
-** SCH_AcquirePointers
-**
 ** NOTE: For complete prolog information, see 'sch_cmds.h'
 ********************************************************************/
 
@@ -759,14 +716,10 @@ int32 SCH_AcquirePointers(void)
     }
 
     return(Result);
-
-} /* End of SCH_AcquirePointers() */
+}
 
 
 /*******************************************************************
-**
-** SCH_VerifyCmdLength
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -792,14 +745,10 @@ int32 SCH_VerifyCmdLength (CFE_SB_MsgPtr_t MessagePtr, uint32 ExpectedLength)
     }
 
     return Status;
-
-} /* End of SCH_VerifyCmdLength () */
+}
 
 
 /*******************************************************************
-**
-** SCH_PostCommandResult
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -815,12 +764,4 @@ void SCH_PostCommandResult(boolean GoodCommand)
     }
 
     return;
-
-} /* End of SCH_PostCommandResult() */
-
-
-
-/************************/
-/*  End of File Comment */
-/************************/
-
+}

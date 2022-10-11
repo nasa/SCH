@@ -113,9 +113,6 @@ SCH_AppData_t           SCH_AppData;
 **************************************************************************/
 
 /*******************************************************************
-**
-** SCH_AppMain
-**
 ** NOTE: For complete prolog information, see 'sch_app.h'
 ********************************************************************/
 
@@ -231,7 +228,6 @@ void SCH_AppMain(void)
             */
             RunStatus = CFE_ES_APP_ERROR;
         }
-
     } /* End of while */
 
     /*
@@ -265,14 +261,10 @@ void SCH_AppMain(void)
     ** Let cFE kill the task (and any child tasks)
     */
     CFE_ES_ExitApp(RunStatus);
-
-} /* End of SH_AppMain() */
+}
 
 
 /*******************************************************************
-**
-** SCH_AppInit
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -351,14 +343,10 @@ int32 SCH_AppInit(void)
                                SCH_MISSION_REV);
  
     return(Status);
-
-} /* End of SCH_AppInit() */
+}
 
 
 /*******************************************************************
-**
-** SCH_EvsInit
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -391,14 +379,10 @@ int32 SCH_EvsInit(void)
     }
 
     return(Status);
-    
-} /* End of SCH_EvsInit() */
+}
 
 
 /*******************************************************************
-**
-** SCH_SbInit
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -455,14 +439,10 @@ int32 SCH_SbInit(void)
     }
 
     return(Status);
-    
-} /* End of SCH_SbInit() */
+}
 
 
 /*******************************************************************
-**
-** SCH_TblInit
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -568,14 +548,10 @@ int32 SCH_TblInit(void)
     }
 
     return(Status);
-
-} /* End of SCH_TblInit() */
+}
 
 
 /*******************************************************************
-**
-** SCH_TimerInit
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -648,14 +624,10 @@ int32 SCH_TimerInit(void)
     }
     
     return(Status);
-    
-} /* End of SCH_TimerInit() */
+}
 
 
 /*******************************************************************
-**
-** SCH_ProcessScheduleTable
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -809,14 +781,10 @@ int32 SCH_ProcessScheduleTable(void)
     }
 
     return(Result);
-
-} /* End of SCH_ProcessScheduleTable() */
+}
 
 
 /*******************************************************************
-**
-** SCH_ProcessNextSlot
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -871,14 +839,10 @@ int32 SCH_ProcessNextSlot(void)
     SCH_AppData.SlotsProcessedCount++;
 
     return(Result);
-
-} /* End of SCH_ProcessNextSlot() */
+}
 
 
 /*******************************************************************
-**
-** SCH_ProcessNextEntry
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -965,14 +929,10 @@ void SCH_ProcessNextEntry(SCH_ScheduleEntry_t *NextEntry, int32 EntryNumber)
     }
 
     return;
-
-} /* End of SCH_ProcessNextEntry() */
+}
 
 
 /*******************************************************************
-**
-** SCH_ProcessCommands
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -1002,14 +962,10 @@ int32 SCH_ProcessCommands(void)
     }
 
     return(Status);
-
-} /* End of SCH_ProcessCommands() */
+}
 
 
 /*******************************************************************
-**
-** SCH_ValidateScheduleData
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -1143,14 +1099,10 @@ int32 SCH_ValidateScheduleData(void *TableData)
     }
 
     return(TableResult);
-
-} /* End of SCH_ValidateScheduleData() */
+}
 
 
 /*******************************************************************
-**
-** SCH_ValidateMessageData
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -1262,11 +1214,4 @@ int32 SCH_ValidateMessageData(void *TableData)
     }
 
     return(TableResult);
-
-} /* End of SCH_ValidateMessageData() */
-
-
-/************************/
-/*  End of File Comment */
-/************************/
-
+}

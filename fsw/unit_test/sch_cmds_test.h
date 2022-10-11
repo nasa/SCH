@@ -24,8 +24,3 @@
  */
 
 void SCH_Cmds_Test_AddTestCases(void);
-
-
-/************************/
-/*  End of File Comment */
-/************************/

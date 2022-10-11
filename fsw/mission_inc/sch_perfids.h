@@ -22,7 +22,3 @@
 #define SCH_APPMAIN_PERF_ID    36 
 
 #endif /* _sch_perfids_h_ */
-
-/************************/
-/*  End of File Comment */
-/************************/

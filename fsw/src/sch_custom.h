@@ -169,6 +169,3 @@ void  SCH_MajorFrameCallback(void);
 void  SCH_MinorFrameCallback(uint32 TimerId);
 
 #endif /* _sch_custom_ */
-/************************/
-/*  End of File Comment */
-/************************/

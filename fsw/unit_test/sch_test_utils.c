@@ -43,12 +43,12 @@ void SCH_Test_Setup(void)
     Ut_OSAPI_Reset();
     Ut_OSFILEAPI_Reset();
     Ut_OSTIMER_Reset();
-} /* end SCH_Test_Setup */
+}
 
 void SCH_Test_TearDown(void)
 {
     /* cleanup test environment */
-} /* end SCH_Test_TearDown */
+}
 
 /*
  * Additional UT-Assert Stub Functions and Required Data Structures
@@ -1080,7 +1080,3 @@ int32 CFE_SB_CleanUpApp (uint32 AppId)
 }
 
 /* end ut_cfe_sb_stubs */
-
-/************************/
-/*  End of File Comment */
-/************************/

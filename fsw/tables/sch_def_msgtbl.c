@@ -390,7 +390,6 @@ SCH_MessageEntry_t SCH_DefaultMessageTable[SCH_MAX_MESSAGES] =
   { { CFE_MAKE_BIG16(SCH_UNUSED_MID) } },
     /* command ID #127 */
   { { CFE_MAKE_BIG16(SCH_UNUSED_MID) } }
-
 };
 
 /*
@@ -417,8 +416,3 @@ CFE_TBL_FILEDEF(SCH_DefaultMessageTable, SCH.MSG_DEFS, SCH message definitions t
 /*
 ** (none)
 */
-
-/************************/
-/*  End of File Comment */
-/************************/
-

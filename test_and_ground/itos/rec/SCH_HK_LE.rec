@@ -30,7 +30,6 @@ CfeTelemetryPacket FSW_SCH_HkPkt
 
     I1 SCH_IgnoreMajorFrame {generateMnemonic="no"}
     I1 SCH_UnexpectedMajorFrame {generateMnemonic="no"}
-
 }
 
 /* Define the mnemonics */
