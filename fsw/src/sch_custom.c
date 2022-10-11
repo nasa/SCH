@@ -70,7 +70,7 @@ int32 SCH_CustomEarlyInit(void)
                              SCH_MinorFrameCallback);
     
     return Status;
-} /* End of CustomEarlyInit() */
+}
 
 
 /*******************************************************************
@@ -102,7 +102,7 @@ int32 SCH_CustomLateInit(void)
     }
 
     return Status;
-} /* End of SH_CustomLateInit() */
+}
 
 
 /*******************************************************************
@@ -139,7 +139,7 @@ uint32 SCH_CustomGetCurrentSlotNumber(void)
     }
     
     return CurrentSlot;
-} /* End of SH_CustomGetCurrentSlotNumber() */
+}
 
 /*******************************************************************
 ** NOTE: For complete prolog information, see 'sch_custom.h'
@@ -149,7 +149,7 @@ void SCH_CustomCleanup(void)
 {
     /* unregister the TIME callback for the major frame */
     CFE_TIME_UnregisterSynchCallback((CFE_TIME_SynchCallbackPtr_t)&SCH_MajorFrameCallback);
-} /* End of SH_CustomCleanup() */
+}
 
 
 /*******************************************************************
@@ -313,7 +313,7 @@ void SCH_MajorFrameCallback(void)
     SCH_AppData.LastSyncMETSlot = SCH_GetMETSlotNumber();
 
     return;
-} /* End of SCH_MajorFrameCallback() */
+}
 
 
 /*******************************************************************
@@ -415,10 +415,4 @@ void SCH_MinorFrameCallback(uint32 TimerId)
     OS_BinSemGive(SCH_AppData.TimeSemaphore);
 
     return;
-} /* End of SCH_MinorFrameCallback() */
-
-
-/************************/
-/*  End of File Comment */
-/************************/
-
+}

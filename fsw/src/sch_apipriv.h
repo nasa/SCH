@@ -105,7 +105,3 @@ void SCH_DisableProcessing(void);
 boolean SCH_GetProcessingState(void);
 
 #endif /* _sch_apipriv_ */
-
-/************************/
-/*  End of File Comment */
-/************************/

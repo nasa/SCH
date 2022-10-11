@@ -55,7 +55,7 @@ void SCH_CustomEarlyInit_Test(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_CustomEarlyInit_Test */
+}
 
 void SCH_CustomLateInit_Test_Nominal(void)
 {
@@ -68,7 +68,7 @@ void SCH_CustomLateInit_Test_Nominal(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_CustomLateInit_Test_Nominal */
+}
 
 void SCH_CustomLateInit_Test_RegisterSynchCallbackError(void)
 {
@@ -84,7 +84,7 @@ void SCH_CustomLateInit_Test_RegisterSynchCallbackError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_CustomLateInit_Test_RegisterSynchCallbackError */
+}
 
 void SCH_CustomLateInit_Test_TimerSetError(void)
 {
@@ -104,7 +104,7 @@ void SCH_CustomLateInit_Test_TimerSetError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_CustomLateInit_Test_TimerSetError */
+}
 
 void SCH_CustomGetCurrentSlotNumber_Test_LowCurrentSlot(void)
 {
@@ -120,7 +120,7 @@ void SCH_CustomGetCurrentSlotNumber_Test_LowCurrentSlot(void)
     UtAssert_True (Result == SCH_TOTAL_SLOTS - 10, "Result == SCH_TOTAL_SLOTS - 10");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_CustomGetCurrentSlotNumber_Test_LowCurrentSlot */
+}
 
 void SCH_CustomGetCurrentSlotNumber_Test_HighCurrentSlot(void)
 {
@@ -139,7 +139,7 @@ void SCH_CustomGetCurrentSlotNumber_Test_HighCurrentSlot(void)
     UtAssert_True (Result == 1, "Result == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_CustomGetCurrentSlotNumber_Test_HighCurrentSlot */
+}
 
 void SCH_CustomGetCurrentSlotNumber_Test_NotSynchronized(void)
 {
@@ -155,7 +155,7 @@ void SCH_CustomGetCurrentSlotNumber_Test_NotSynchronized(void)
     UtAssert_True (Result == 10, "Result == 10");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_CustomGetCurrentSlotNumber_Test_NotSynchronized */
+}
 
 void SCH_CustomCleanup_Test(void)
 {
@@ -164,7 +164,7 @@ void SCH_CustomCleanup_Test(void)
     
     /* Verify results */
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_CustomCleanup_Test */
+}
 
 void SCH_GetMETSlotNumber_Test_Rollover(void)
 {
@@ -180,7 +180,7 @@ void SCH_GetMETSlotNumber_Test_Rollover(void)
     UtAssert_True (Result == 0, "Result == 0");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_GetMETSlotNumber_Test_Rollover */
+}
 
 void SCH_GetMETSlotNumber_Test_NoRollover(void)
 {
@@ -196,7 +196,7 @@ void SCH_GetMETSlotNumber_Test_NoRollover(void)
     UtAssert_True (Result == 1, "Result == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_GetMETSlotNumber_Test_NoRollover */
+}
 
 void SCH_MajorFrameCallback_Test_NoisyNotSynchronized(void)
 {
@@ -219,7 +219,7 @@ void SCH_MajorFrameCallback_Test_NoisyNotSynchronized(void)
     UtAssert_True (SCH_AppData.LastSyncMETSlot == 1, "SCH_AppData.LastSyncMETSlot == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_MajorFrameCallback_Test_NoisyNotSynchronized */
+}
 
 void SCH_MajorFrameCallback_Test_NoisySynchronized(void)
 {
@@ -242,7 +242,7 @@ void SCH_MajorFrameCallback_Test_NoisySynchronized(void)
     UtAssert_True (SCH_AppData.LastSyncMETSlot == 1, "SCH_AppData.LastSyncMETSlot == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_MajorFrameCallback_Test_NoisySynchronized */
+}
 
 void SCH_MajorFrameCallback_Test_FrameOccurredWhenExpected(void)
 {
@@ -266,7 +266,7 @@ void SCH_MajorFrameCallback_Test_FrameOccurredWhenExpected(void)
     UtAssert_True (SCH_AppData.LastSyncMETSlot == 1, "SCH_AppData.LastSyncMETSlot == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_MajorFrameCallback_Test_FrameOccurredWhenExpected */
+}
 
 #define CFE_TIME_FLAG_FLYING   1
 void SCH_MajorFrameCallback_Test_FlywheelMode(void)
@@ -284,7 +284,7 @@ void SCH_MajorFrameCallback_Test_FlywheelMode(void)
     UtAssert_True (SCH_AppData.LastSyncMETSlot == 1, "SCH_AppData.LastSyncMETSlot == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_MajorFrameCallback_Test_FlywheelMode */
+}
 
 void SCH_MinorFrameCallback_Test_SyncAttemptsLeft(void)
 {
@@ -305,7 +305,7 @@ void SCH_MinorFrameCallback_Test_SyncAttemptsLeft(void)
     UtAssert_True(SCH_AppData.LastSyncMETSlot == 0, "SCH_AppData.LastSyncMETSlot == 0");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_MinorFrameCallback_Test_SyncAttemptsLeft */
+}
 
 void SCH_MinorFrameCallback_Test_SynchronizationAchievedNominal(void)
 {
@@ -324,7 +324,7 @@ void SCH_MinorFrameCallback_Test_SynchronizationAchievedNominal(void)
     UtAssert_True(SCH_AppData.LastSyncMETSlot == 0, "SCH_AppData.LastSyncMETSlot == 0");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_MinorFrameCallback_Test_SynchronizationAchievedNominal */
+}
 
 void SCH_MinorFrameCallback_Test_AlreadySynchronizedNominal(void)
 {
@@ -339,7 +339,7 @@ void SCH_MinorFrameCallback_Test_AlreadySynchronizedNominal(void)
     UtAssert_True(SCH_AppData.MinorFramesSinceTone == 1, "SCH_AppData.MinorFramesSinceTone == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_MinorFrameCallback_Test_AlreadySynchronizedNominal */
+}
 
 void SCH_MinorFrameCallback_Test_AlreadySynchronizedRollover(void)
 {
@@ -356,7 +356,7 @@ void SCH_MinorFrameCallback_Test_AlreadySynchronizedRollover(void)
     UtAssert_True(SCH_AppData.MissedMajorFrameCount == 1, "SCH_AppData.MissedMajorFrameCount == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_MinorFrameCallback_Test_AlreadySynchronizedRollover */
+}
 
 void SCH_MinorFrameCallback_Test_AlreadySynchronizedStartTimer(void)
 {
@@ -372,7 +372,7 @@ void SCH_MinorFrameCallback_Test_AlreadySynchronizedStartTimer(void)
     UtAssert_True(SCH_AppData.MinorFramesSinceTone == SCH_TIME_SYNC_SLOT, "SCH_AppData.MinorFramesSinceTone == SCH_TIME_SYNC_SLOT");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_MinorFrameCallback_Test_AlreadySynchronizedStartTimer */
+}
 
 void SCH_Custom_Test_AddTestCases(void)
 {
@@ -401,8 +401,4 @@ void SCH_Custom_Test_AddTestCases(void)
     UtTest_Add(SCH_MinorFrameCallback_Test_AlreadySynchronizedNominal, SCH_Test_Setup, SCH_Test_TearDown, "SCH_MinorFrameCallback_Test_AlreadySynchronizedNominal");
     UtTest_Add(SCH_MinorFrameCallback_Test_AlreadySynchronizedRollover, SCH_Test_Setup, SCH_Test_TearDown, "SCH_MinorFrameCallback_Test_AlreadySynchronizedRollover");
     UtTest_Add(SCH_MinorFrameCallback_Test_AlreadySynchronizedStartTimer, SCH_Test_Setup, SCH_Test_TearDown, "SCH_MinorFrameCallback_Test_AlreadySynchronizedStartTimer");
-} /* end SCH_Custom_Test_AddTestCases */
-
-/************************/
-/*  End of File Comment */
-/************************/
+}

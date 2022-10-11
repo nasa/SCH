@@ -24,8 +24,3 @@
  */
 
 void SCH_API_Test_AddTestCases(void);
-
-
-/************************/
-/*  End of File Comment */
-/************************/

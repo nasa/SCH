@@ -140,7 +140,7 @@ int32 SCH_AppPipe(CFE_SB_MsgPtr_t MessagePtr)
     }
 
     return(Result);
-} /* End of SCH_AppPipe() */
+}
 
 
 /*******************************************************************
@@ -208,7 +208,7 @@ int32 SCH_HousekeepingCmd(CFE_SB_MsgPtr_t MessagePtr)
     TableResult = SCH_AcquirePointers();
 
     return(TableResult);
-} /* End of SCH_HousekeepingCmd() */
+}
 
 
 /*******************************************************************
@@ -237,7 +237,7 @@ void SCH_NoopCmd(CFE_SB_MsgPtr_t MessagePtr)
     }
 
     return;
-} /* End of SCH_NoopCmd() */
+}
 
 
 /*******************************************************************
@@ -279,7 +279,7 @@ void SCH_ResetCmd(CFE_SB_MsgPtr_t MessagePtr)
     }
 
     return;
-} /* End of SCH_ResetCmd() */
+}
 
 
 /*******************************************************************
@@ -345,7 +345,7 @@ void SCH_EnableCmd(CFE_SB_MsgPtr_t MessagePtr)
     SCH_PostCommandResult(GoodCommand);
 
     return;
-} /* End of SCH_EnableCmd() */
+}
 
 
 /*******************************************************************
@@ -411,7 +411,7 @@ void SCH_DisableCmd(CFE_SB_MsgPtr_t MessagePtr)
     SCH_PostCommandResult(GoodCommand);
 
     return;
-} /* End of SCH_DisableCmd() */
+}
 
 
 /*******************************************************************
@@ -498,7 +498,7 @@ void SCH_EnableGroupCmd(CFE_SB_MsgPtr_t MessagePtr)
     SCH_PostCommandResult(GoodCommand);
 
     return;
-} /* End of SCH_EnableGroupCmd() */
+}
 
 
 /*******************************************************************
@@ -585,7 +585,7 @@ void SCH_DisableGroupCmd(CFE_SB_MsgPtr_t MessagePtr)
     SCH_PostCommandResult(GoodCommand);
 
     return;
-} /* End of SCH_DisableGroupCmd() */
+}
 
 
 /*******************************************************************
@@ -611,7 +611,7 @@ void SCH_EnableSyncCmd(CFE_SB_MsgPtr_t MessagePtr)
     SCH_PostCommandResult(GoodCommand);
 
     return;
-} /* End of SCH_EnableSyncCmd() */
+}
 
 
 
@@ -671,7 +671,7 @@ void SCH_SendDiagTlmCmd(CFE_SB_MsgPtr_t MessagePtr)
     SCH_PostCommandResult(GoodCommand);
 
     return;
-} /* End of SCH_SendDiagTlmCmd() */
+}
 
 
 /*******************************************************************
@@ -716,7 +716,7 @@ int32 SCH_AcquirePointers(void)
     }
 
     return(Result);
-} /* End of SCH_AcquirePointers() */
+}
 
 
 /*******************************************************************
@@ -745,7 +745,7 @@ int32 SCH_VerifyCmdLength (CFE_SB_MsgPtr_t MessagePtr, uint32 ExpectedLength)
     }
 
     return Status;
-} /* End of SCH_VerifyCmdLength () */
+}
 
 
 /*******************************************************************
@@ -764,11 +764,4 @@ void SCH_PostCommandResult(boolean GoodCommand)
     }
 
     return;
-} /* End of SCH_PostCommandResult() */
-
-
-
-/************************/
-/*  End of File Comment */
-/************************/
-
+}

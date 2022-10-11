@@ -34,9 +34,4 @@ int main(void)
     SCH_Custom_Test_AddTestCases();
 
     return(UtTest_Run());
-} /* end main */
-
-
-/************************/
-/*  End of File Comment */
-/************************/
+}

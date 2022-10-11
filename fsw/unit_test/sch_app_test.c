@@ -105,7 +105,7 @@ void SCH_AppMain_Test_RegisterAppError(void)
     UtAssert_True (SCH_AppData.AppID == 99, "SCH_AppData.AppID == 99");
 
     UtAssert_True (Ut_CFE_ES_GetSysLogQueueDepth() == 1, "Ut_CFE_ES_GetSysLogQueueDepth() == 1");
-} /* end SCH_AppMain_Test_RegisterAppError */
+}
 
 void SCH_AppMain_Test_AppInitError(void)
 {
@@ -133,7 +133,7 @@ void SCH_AppMain_Test_AppInitError(void)
 
     UtAssert_True (Ut_CFE_ES_GetSysLogQueueDepth() == 2, "Ut_CFE_ES_GetSysLogQueueDepth() == 2");
     /* Generates 1 system log message we don't care about in this test */
-} /* end SCH_AppMain_Test_AppInitError */
+}
 
 void SCH_AppMain_Test_CustomLateInitError(void)
 {
@@ -170,7 +170,7 @@ void SCH_AppMain_Test_CustomLateInitError(void)
 
     UtAssert_True (Ut_CFE_ES_GetSysLogQueueDepth() == 1, "Ut_CFE_ES_GetSysLogQueueDepth() == 1");
     /* Generates 1 system log message we don't care about in this test */
-} /* end SCH_AppMain_Test_CustomLateInitError */
+}
 
 void SCH_AppMain_Test_NoisyMajorFrameError(void)
 {
@@ -209,7 +209,7 @@ void SCH_AppMain_Test_NoisyMajorFrameError(void)
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 3, "Ut_CFE_EVS_GetEventQueueDepth() == 3");
     /* Generates 2 event messages we don't care about in this test */
 #endif
-} /* end SCH_AppMain_Test_NoisyMajorFrameError */
+}
 
 void SCH_AppMain_Test_NominalIgnoreMajorFrameFalse(void)
 {
@@ -235,7 +235,7 @@ void SCH_AppMain_Test_NominalIgnoreMajorFrameFalse(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppMain_Test_NominalIgnoreMajorFrameFalse */
+}
 
 void SCH_AppMain_Test_ProcessScheduleTableError(void)
 {
@@ -282,7 +282,7 @@ void SCH_AppMain_Test_ProcessScheduleTableError(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 3, "Ut_CFE_EVS_GetEventQueueDepth() == 3");
     /* Generates 3 event messages we don't care about in this test */
-} /* end SCH_AppMain_Test_ProcessScheduleTableError */
+}
 
 void SCH_AppMain_Test_Nominal(void)
 {
@@ -306,7 +306,7 @@ void SCH_AppMain_Test_Nominal(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppMain_Test_Nominal */
+}
 
 void SCH_AppInit_Test_GetAppIDError(void)
 {
@@ -346,7 +346,7 @@ void SCH_AppInit_Test_GetAppIDError(void)
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
 
     UtAssert_True (Ut_CFE_ES_GetSysLogQueueDepth() == 1, "Ut_CFE_ES_GetSysLogQueueDepth() == 1");
-} /* end SCH_AppInit_Test_GetAppIDError */
+}
 
 void SCH_AppInit_Test_EvsInitError(void)
 {
@@ -380,7 +380,7 @@ void SCH_AppInit_Test_EvsInitError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_AppInit_Test_EvsInitError */
+}
 
 void SCH_AppInit_Test_SbInitError(void)
 {
@@ -415,7 +415,7 @@ void SCH_AppInit_Test_SbInitError(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppInit_Test_SbInitError */
+}
 
 void SCH_AppInit_Test_TblInitError(void)
 {
@@ -450,7 +450,7 @@ void SCH_AppInit_Test_TblInitError(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppInit_Test_TblInitError */
+}
 
 void SCH_AppInit_Test_TimerInitError(void)
 {
@@ -489,7 +489,7 @@ void SCH_AppInit_Test_TimerInitError(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppInit_Test_TimerInitError */
+}
 
 void SCH_AppInit_Test_Nominal(void)
 {
@@ -528,7 +528,7 @@ void SCH_AppInit_Test_Nominal(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_AppInit_Test_Nominal */
+}
 
 void SCH_EvsInit_Test_RegisterError(void)
 {
@@ -575,7 +575,7 @@ void SCH_EvsInit_Test_RegisterError(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
     UtAssert_True (Ut_CFE_ES_GetSysLogQueueDepth() == 1, "Ut_CFE_ES_GetSysLogQueueDepth() == 1");
-} /* end SCH_EvsInit_Test_RegisterError */
+}
 
 void SCH_EvsInit_Test_Nominal(void)
 {
@@ -615,7 +615,7 @@ void SCH_EvsInit_Test_Nominal(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
     UtAssert_True (Ut_CFE_ES_GetSysLogQueueDepth() == 0, "Ut_CFE_ES_GetSysLogQueueDepth() == 0");
-} /* end SCH_EvsInit_Test_Nominal */
+}
 
 void SCH_SbInit_Test_CreatePipeError(void)
 {
@@ -641,7 +641,7 @@ void SCH_SbInit_Test_CreatePipeError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_SbInit_Test_CreatePipeError */
+}
 
 void SCH_SbInit_Test_SubscribeHKError(void)
 {
@@ -667,7 +667,7 @@ void SCH_SbInit_Test_SubscribeHKError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_SbInit_Test_SubscribeHKError */
+}
 
 void SCH_SbInit_Test_SubscribeGNDError(void)
 {
@@ -693,7 +693,7 @@ void SCH_SbInit_Test_SubscribeGNDError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_SbInit_Test_SubscribeGNDError */
+}
 
 void SCH_SbInit_Test_Nominal(void)
 {
@@ -712,7 +712,7 @@ void SCH_SbInit_Test_Nominal(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_SbInit_Test_Nominal */
+}
 
 void SCH_TblInit_Test_RegisterSdtError(void)
 {
@@ -752,7 +752,7 @@ void SCH_TblInit_Test_RegisterSdtError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_TblInit_Test_RegisterSdtError */
+}
 
 void SCH_TblInit_Test_RegisterMdtError(void)
 {
@@ -792,7 +792,7 @@ void SCH_TblInit_Test_RegisterMdtError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_TblInit_Test_RegisterMdtError */
+}
 
 void SCH_TblInit_Test_LoadSdtError(void)
 {
@@ -832,7 +832,7 @@ void SCH_TblInit_Test_LoadSdtError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_TblInit_Test_LoadSdtError */
+}
 
 void SCH_TblInit_Test_LoadMdtError(void)
 {
@@ -872,7 +872,7 @@ void SCH_TblInit_Test_LoadMdtError(void)
     UtAssert_True (Result == 0xCC000013, "Result == 0xCC000013");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_TblInit_Test_LoadMdtError */
+}
 
 void SCH_TblInit_Test_AcquirePointersError(void)
 {
@@ -916,7 +916,7 @@ void SCH_TblInit_Test_AcquirePointersError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_TblInit_Test_AcquirePointersError */
+}
 
 void SCH_TblInit_Test_Nominal(void)
 {
@@ -953,7 +953,7 @@ void SCH_TblInit_Test_Nominal(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_TblInit_Test_Nominal */
+}
 
 void SCH_TimerInit_Test_CustomEarlyInitError(void)
 {
@@ -1004,7 +1004,7 @@ void SCH_TimerInit_Test_CustomEarlyInitError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_TimerInit_Test_CustomEarlyInitError */
+}
 
 void SCH_TimerInit_Test_TimerAccuracyWarning(void)
 {
@@ -1058,7 +1058,7 @@ void SCH_TimerInit_Test_TimerAccuracyWarning(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_TimerInit_Test_TimerAccuracyWarning */
+}
 
 void SCH_TimerInit_Test_BinSemCreateError(void)
 {
@@ -1108,7 +1108,7 @@ void SCH_TimerInit_Test_BinSemCreateError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_TimerInit_Test_BinSemCreateError */
+}
 
 void SCH_TimerInit_Test_Nominal(void)
 {
@@ -1151,7 +1151,7 @@ void SCH_TimerInit_Test_Nominal(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_TimerInit_Test_Nominal */
+}
 
 void SCH_ProcessScheduleTable_Test_ProcessCount2LastProcessCount1(void)
 {
@@ -1173,7 +1173,7 @@ void SCH_ProcessScheduleTable_Test_ProcessCount2LastProcessCount1(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_ProcessScheduleTable_Test_ProcessCount2LastProcessCount1 */
+}
 
 void SCH_ProcessScheduleTable_Test_ProcessCountTotalSlotsLastProcessCountNotSame(void)
 {
@@ -1195,7 +1195,7 @@ void SCH_ProcessScheduleTable_Test_ProcessCountTotalSlotsLastProcessCountNotSame
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_ProcessScheduleTable_Test_ProcessCountTotalSlotsLastProcessCountNotSame */
+}
 
 void SCH_ProcessScheduleTable_Test_ProcessCountTotalSlotsLastProcessCountSame(void)
 {
@@ -1223,7 +1223,7 @@ void SCH_ProcessScheduleTable_Test_ProcessCountTotalSlotsLastProcessCountSame(vo
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_ProcessScheduleTable_Test_ProcessCountTotalSlotsLastProcessCountSame */
+}
 
 void SCH_ProcessScheduleTable_Test_ProcessCountOtherAndNoRollover(void)
 {
@@ -1245,7 +1245,7 @@ void SCH_ProcessScheduleTable_Test_ProcessCountOtherAndNoRollover(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_ProcessScheduleTable_Test_ProcessCountOtherAndNoRollover */
+}
 
 void SCH_ProcessScheduleTable_Test_SkippedSlotsErrorIncrementTablePassCountAndCallProcessCommands(void)
 {
@@ -1280,7 +1280,7 @@ void SCH_ProcessScheduleTable_Test_SkippedSlotsErrorIncrementTablePassCountAndCa
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_ProcessScheduleTable_Test_SkippedSlotsErrorIncrementTablePassCountAndCallProcessCommands */
+}
 
 void SCH_ProcessScheduleTable_Test_MultiSlotsProcessCountTooLargeSynchronizedProcessCountGreaterThanMaxSlotsPerWakeup(void)
 {
@@ -1310,7 +1310,7 @@ void SCH_ProcessScheduleTable_Test_MultiSlotsProcessCountTooLargeSynchronizedPro
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_ProcessScheduleTable_Test_MultiSlotsProcessCountTooLargeSynchronizedProcessCountGreaterThanMaxSlotsPerWakeup */
+}
 
 void SCH_ProcessScheduleTable_Test_MultiSlotsNotSynchronizedProcessCountGreaterThanMaxSlotsPerWakeup(void)
 {
@@ -1342,7 +1342,7 @@ void SCH_ProcessScheduleTable_Test_MultiSlotsNotSynchronizedProcessCountGreaterT
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_ProcessScheduleTable_Test_MultiSlotsNotSynchronizedProcessCountGreaterThanMaxSlotsPerWakeup */
+}
 
 void SCH_ProcessNextSlot_Test_ProcessCommandsRollover(void)
 {
@@ -1368,7 +1368,7 @@ void SCH_ProcessNextSlot_Test_ProcessCommandsRollover(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
     /* Generates 2 event message we don't care about in this test */
-} /* end SCH_ProcessNextSlot_Test_ProcessCommandsRollover */
+}
 
 void SCH_ProcessNextSlot_Test_DoNotProcessCommandsNoRollover(void)
 {
@@ -1393,7 +1393,7 @@ void SCH_ProcessNextSlot_Test_DoNotProcessCommandsNoRollover(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
     /* Generates 2 event message we don't care about in this test */
-} /* end SCH_ProcessNextSlot_Test_DoNotProcessCommandsNoRollover */
+}
 
 void SCH_ProcessNextEntry_Test_CorruptMessageIndex(void)
 {
@@ -1423,7 +1423,7 @@ void SCH_ProcessNextEntry_Test_CorruptMessageIndex(void)
     UtAssert_True (SCH_AppData.ScheduleTable[EntryNumber].EnableState == SCH_DISABLED, "SCH_AppData.ScheduleTable[EntryNumber].EnableState == SCH_DISABLED");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ProcessNextEntry_Test_CorruptMessageIndex */
+}
 
 void SCH_ProcessNextEntry_Test_CorruptFrequency(void)
 {
@@ -1453,7 +1453,7 @@ void SCH_ProcessNextEntry_Test_CorruptFrequency(void)
     UtAssert_True (SCH_AppData.ScheduleTable[EntryNumber].EnableState == SCH_DISABLED, "SCH_AppData.ScheduleTable[EntryNumber].EnableState == SCH_DISABLED");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ProcessNextEntry_Test_CorruptFrequency */
+}
 
 void SCH_ProcessNextEntry_Test_CorruptType(void)
 {
@@ -1483,7 +1483,7 @@ void SCH_ProcessNextEntry_Test_CorruptType(void)
     UtAssert_True (SCH_AppData.ScheduleTable[EntryNumber].EnableState == SCH_DISABLED, "SCH_AppData.ScheduleTable[EntryNumber].EnableState == SCH_DISABLED");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ProcessNextEntry_Test_CorruptType */
+}
 
 void SCH_ProcessNextEntry_Test_CorruptRemainder(void)
 {
@@ -1513,7 +1513,7 @@ void SCH_ProcessNextEntry_Test_CorruptRemainder(void)
     UtAssert_True (SCH_AppData.ScheduleTable[EntryNumber].EnableState == SCH_DISABLED, "SCH_AppData.ScheduleTable[EntryNumber].EnableState == SCH_DISABLED");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ProcessNextEntry_Test_CorruptRemainder */
+}
 
 void SCH_ProcessNextEntry_Test_Success(void)
 {
@@ -1537,7 +1537,7 @@ void SCH_ProcessNextEntry_Test_Success(void)
     UtAssert_True (SCH_AppData.ScheduleActivitySuccessCount == 1, "SCH_AppData.ScheduleActivitySuccessCount == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_ProcessNextEntry_Test_Success */
+}
 
 void SCH_ProcessNextEntry_Test_PacketSendError(void)
 {
@@ -1565,7 +1565,7 @@ void SCH_ProcessNextEntry_Test_PacketSendError(void)
         "Activity error: slot = 2, entry = 1, err = 0xFFFFFFFF");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_ProcessNextEntry_Test_PacketSendError */
+}
 
 void SCH_ProcessCommands_Test_OneMessage(void)
 {
@@ -1591,7 +1591,7 @@ void SCH_ProcessCommands_Test_OneMessage(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_ProcessCommands_Test_OneMessage */
+}
 
 void SCH_ProcessCommands_Test_NoMessage(void)
 {
@@ -1612,7 +1612,7 @@ void SCH_ProcessCommands_Test_NoMessage(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_ProcessCommands_Test_NoMessage */
+}
 
 void SCH_ProcessCommands_Test_RcvMsgError(void)
 {
@@ -1633,7 +1633,7 @@ void SCH_ProcessCommands_Test_RcvMsgError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_ProcessCommands_Test_RcvMsgError */
+}
 
 void SCH_ProcessCommands_Test_AppPipeError(void)
 {
@@ -1657,7 +1657,7 @@ void SCH_ProcessCommands_Test_AppPipeError(void)
     UtAssert_True (Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_ProcessCommands_Test_AppPipeError */
+}
 
 void SCH_ValidateScheduleData_Test_GarbageFrequency(void)
 {
@@ -1691,7 +1691,7 @@ void SCH_ValidateScheduleData_Test_GarbageFrequency(void)
     UtAssert_True (Result == SCH_SDT_GARBAGE_ENTRY, "Result == SCH_SDT_GARBAGE_ENTRY");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateScheduleData_Test_GarbageFrequency */
+}
 
 void SCH_ValidateScheduleData_Test_GarbageRemainder(void)
 {
@@ -1725,7 +1725,7 @@ void SCH_ValidateScheduleData_Test_GarbageRemainder(void)
     UtAssert_True (Result == SCH_SDT_GARBAGE_ENTRY, "Result == SCH_SDT_GARBAGE_ENTRY");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateScheduleData_Test_GarbageRemainder */
+}
 
 void SCH_ValidateScheduleData_Test_GarbageGroupData(void)
 {
@@ -1759,7 +1759,7 @@ void SCH_ValidateScheduleData_Test_GarbageGroupData(void)
     UtAssert_True (Result == SCH_SDT_GARBAGE_ENTRY, "Result == SCH_SDT_GARBAGE_ENTRY");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateScheduleData_Test_GarbageGroupData */
+}
 
 void SCH_ValidateScheduleData_Test_GarbageType(void)
 {
@@ -1793,7 +1793,7 @@ void SCH_ValidateScheduleData_Test_GarbageType(void)
     UtAssert_True (Result == SCH_SDT_GARBAGE_ENTRY, "Result == SCH_SDT_GARBAGE_ENTRY");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateScheduleData_Test_GarbageType */
+}
 
 void SCH_ValidateScheduleData_Test_GarbageMessageIndex(void)
 {
@@ -1827,7 +1827,7 @@ void SCH_ValidateScheduleData_Test_GarbageMessageIndex(void)
     UtAssert_True (Result == SCH_SDT_GARBAGE_ENTRY, "Result == SCH_SDT_GARBAGE_ENTRY");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateScheduleData_Test_GarbageMessageIndex */
+}
 
 void SCH_ValidateScheduleData_Test_EnableStateUnusedAllFieldsUnused(void)
 {
@@ -1857,7 +1857,7 @@ void SCH_ValidateScheduleData_Test_EnableStateUnusedAllFieldsUnused(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_ValidateScheduleData_Test_EnableStateUnusedAllFieldsUnused */
+}
 
 void SCH_ValidateScheduleData_Test_EnableStateEnabledFrequencyUnused(void)
 {
@@ -1891,7 +1891,7 @@ void SCH_ValidateScheduleData_Test_EnableStateEnabledFrequencyUnused(void)
     UtAssert_True (Result == SCH_SDT_NO_FREQUENCY, "Result == SCH_SDT_NO_FREQUENCY");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateScheduleData_Test_EnableStateEnabledFrequencyUnused */
+}
 
 void SCH_ValidateScheduleData_Test_EnableStateDisabledFrequencyUnused(void)
 {
@@ -1925,7 +1925,7 @@ void SCH_ValidateScheduleData_Test_EnableStateDisabledFrequencyUnused(void)
     UtAssert_True (Result == SCH_SDT_NO_FREQUENCY, "Result == SCH_SDT_NO_FREQUENCY");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateScheduleData_Test_EnableStateDisabledFrequencyUnused */
+}
 
 void SCH_ValidateScheduleData_Test_BadRemainder(void)
 {
@@ -1959,7 +1959,7 @@ void SCH_ValidateScheduleData_Test_BadRemainder(void)
     UtAssert_True (Result == SCH_SDT_BAD_REMAINDER, "Result == SCH_SDT_BAD_REMAINDER");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateScheduleData_Test_BadRemainder */
+}
 
 void SCH_ValidateScheduleData_Test_BadActivity(void)
 {
@@ -1993,7 +1993,7 @@ void SCH_ValidateScheduleData_Test_BadActivity(void)
     UtAssert_True (Result == SCH_SDT_BAD_ACTIVITY, "Result == SCH_SDT_BAD_ACTIVITY");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateScheduleData_Test_BadActivity */
+}
 
 void SCH_ValidateScheduleData_Test_MsgIndexZero(void)
 {
@@ -2027,7 +2027,7 @@ void SCH_ValidateScheduleData_Test_MsgIndexZero(void)
     UtAssert_True (Result == SCH_SDT_BAD_MSG_INDEX, "Result == SCH_SDT_BAD_MSG_INDEX");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateScheduleData_Test_MsgIndexZero */
+}
 
 void SCH_ValidateScheduleData_Test_MsgIndexTooHigh(void)
 {
@@ -2061,7 +2061,7 @@ void SCH_ValidateScheduleData_Test_MsgIndexTooHigh(void)
     UtAssert_True (Result == SCH_SDT_BAD_MSG_INDEX, "Result == SCH_SDT_BAD_MSG_INDEX");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateScheduleData_Test_MsgIndexTooHigh */
+}
 
 void SCH_ValidateScheduleData_Test_ValidEntryResult(void)
 {
@@ -2092,7 +2092,7 @@ void SCH_ValidateScheduleData_Test_ValidEntryResult(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_ValidateScheduleData_Test_ValidEntryResult */
+}
 
 void SCH_ValidateScheduleData_Test_EnableStateOther(void)
 {
@@ -2126,7 +2126,7 @@ void SCH_ValidateScheduleData_Test_EnableStateOther(void)
     UtAssert_True (Result == SCH_SDT_BAD_ENABLE_STATE, "Result == SCH_SDT_BAD_ENABLE_STATE");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateScheduleData_Test_EnableStateOther */
+}
 
 void SCH_ValidateMessageData_Test_MessageIdUnusedGarbageEntry(void)
 {
@@ -2162,7 +2162,7 @@ void SCH_ValidateMessageData_Test_MessageIdUnusedGarbageEntry(void)
     UtAssert_True (Result == SCH_MDT_GARBAGE_ENTRY, "Result == SCH_MDT_GARBAGE_ENTRY");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateMessageData_Test_MessageIdUnusedGarbageEntry */
+}
 
 void SCH_ValidateMessageData_Test_MessageIdUnusedValid(void)
 {
@@ -2189,7 +2189,7 @@ void SCH_ValidateMessageData_Test_MessageIdUnusedValid(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_ValidateMessageData_Test_MessageIdUnusedValid */
+}
 
 void SCH_ValidateMessageData_Test_MessageIdValidRangeLengthTooHigh(void)
 {
@@ -2220,7 +2220,7 @@ void SCH_ValidateMessageData_Test_MessageIdValidRangeLengthTooHigh(void)
     UtAssert_True (Result == SCH_MDT_INVALID_LENGTH, "Result == SCH_MDT_INVALID_LENGTH");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateMessageData_Test_MessageIdValidRangeLengthTooHigh */
+}
 
 void SCH_ValidateMessageData_Test_MessageIdValidRangeLengthTooLow(void)
 {
@@ -2251,7 +2251,7 @@ void SCH_ValidateMessageData_Test_MessageIdValidRangeLengthTooLow(void)
     UtAssert_True (Result == SCH_MDT_INVALID_LENGTH, "Result == SCH_MDT_INVALID_LENGTH");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateMessageData_Test_MessageIdValidRangeLengthTooLow */
+}
 
 void SCH_ValidateMessageData_Test_MessageIdValidRangeLengthOdd(void)
 {
@@ -2282,7 +2282,7 @@ void SCH_ValidateMessageData_Test_MessageIdValidRangeLengthOdd(void)
     UtAssert_True (Result == SCH_MDT_INVALID_LENGTH, "Result == SCH_MDT_INVALID_LENGTH");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateMessageData_Test_MessageIdValidRangeLengthOdd */
+}
 
 void SCH_ValidateMessageData_Test_MessageIdValidRangeLengthValid(void)
 {
@@ -2309,7 +2309,7 @@ void SCH_ValidateMessageData_Test_MessageIdValidRangeLengthValid(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_ValidateMessageData_Test_MessageIdValidRangeLengthValid */
+}
 
 void SCH_ValidateMessageData_Test_MessageIdOther(void)
 {
@@ -2340,7 +2340,7 @@ void SCH_ValidateMessageData_Test_MessageIdOther(void)
     UtAssert_True (Result == SCH_MDT_BAD_MSG_ID, "Result == SCH_MDT_BAD_MSG_ID");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 2, "Ut_CFE_EVS_GetEventQueueDepth() == 2");
-} /* end SCH_ValidateMessageData_Test_MessageIdOther */
+}
 
 void SCH_App_Test_AddTestCases(void)
 {
@@ -2430,8 +2430,4 @@ void SCH_App_Test_AddTestCases(void)
     UtTest_Add(SCH_ValidateMessageData_Test_MessageIdValidRangeLengthOdd, SCH_Test_Setup, SCH_Test_TearDown, "SCH_ValidateMessageData_Test_MessageIdValidRangeLengthOdd");
     UtTest_Add(SCH_ValidateMessageData_Test_MessageIdValidRangeLengthValid, SCH_Test_Setup, SCH_Test_TearDown, "SCH_ValidateMessageData_Test_MessageIdValidRangeLengthValid");
     UtTest_Add(SCH_ValidateMessageData_Test_MessageIdOther, SCH_Test_Setup, SCH_Test_TearDown, "SCH_ValidateMessageData_Test_MessageIdOther");
-} /* end SCH_App_Test_AddTestCases */
-
-/************************/
-/*  End of File Comment */
-/************************/
+}

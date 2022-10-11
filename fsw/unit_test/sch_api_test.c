@@ -57,7 +57,7 @@ void SCH_LibInit_Test(void)
     UtAssert_True (Result == OS_SUCCESS, "Result == OS_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_LibInit_Test */
+}
 
 void SCH_EnableProcessing_Test(void)
 {
@@ -70,7 +70,7 @@ void SCH_EnableProcessing_Test(void)
     UtAssert_True (SCH_LibData.ProcessingDisabledCtr == 0, "SCH_LibData.ProcessingDisabledCtr == 0");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_EnableProcessing_Test */
+}
 
 void SCH_DisableProcessing_Test(void)
 {
@@ -81,7 +81,7 @@ void SCH_DisableProcessing_Test(void)
     UtAssert_True (SCH_LibData.ProcessingDisabledCtr == 1, "SCH_LibData.ProcessingDisabledCtr == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_DisableProcessing_Test */
+}
 
 void SCH_GetProcessingState_Test_True(void)
 {
@@ -96,7 +96,7 @@ void SCH_GetProcessingState_Test_True(void)
     UtAssert_True (Result == TRUE, "Result == TRUE");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_GetProcessingState_Test_True */
+}
 
 void SCH_GetProcessingState_Test_False(void)
 {
@@ -111,7 +111,7 @@ void SCH_GetProcessingState_Test_False(void)
     UtAssert_True (Result == FALSE, "Result == FALSE");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_GetProcessingState_Test_False */
+}
 
 void SCH_API_Test_AddTestCases(void)
 {
@@ -123,8 +123,4 @@ void SCH_API_Test_AddTestCases(void)
 
     UtTest_Add(SCH_GetProcessingState_Test_True, SCH_Test_Setup, SCH_Test_TearDown, "SCH_GetProcessingState_Test_True");
     UtTest_Add(SCH_GetProcessingState_Test_False, SCH_Test_Setup, SCH_Test_TearDown, "SCH_GetProcessingState_Test_False");
-} /* end SCH_API_Test_AddTestCases */
-
-/************************/
-/*  End of File Comment */
-/************************/
+}

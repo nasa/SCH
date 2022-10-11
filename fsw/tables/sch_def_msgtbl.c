@@ -416,8 +416,3 @@ CFE_TBL_FILEDEF(SCH_DefaultMessageTable, SCH.MSG_DEFS, SCH message definitions t
 /*
 ** (none)
 */
-
-/************************/
-/*  End of File Comment */
-/************************/
-

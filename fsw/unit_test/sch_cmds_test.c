@@ -64,7 +64,7 @@ void SCH_AppPipe_Test_SendHK(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_AppPipe_Test_SendHK */
+}
 
 void SCH_AppPipe_Test_Noop(void)
 {
@@ -82,7 +82,7 @@ void SCH_AppPipe_Test_Noop(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppPipe_Test_Noop */
+}
 
 void SCH_AppPipe_Test_Reset(void)
 {
@@ -100,7 +100,7 @@ void SCH_AppPipe_Test_Reset(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppPipe_Test_Reset */
+}
 
 void SCH_AppPipe_Test_Enable(void)
 {
@@ -122,7 +122,7 @@ void SCH_AppPipe_Test_Enable(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppPipe_Test_Enable */
+}
 
 void SCH_AppPipe_Test_Disable(void)
 {
@@ -144,7 +144,7 @@ void SCH_AppPipe_Test_Disable(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppPipe_Test_Disable */
+}
 
 void SCH_AppPipe_Test_EnableGroupCmd(void)
 {
@@ -162,7 +162,7 @@ void SCH_AppPipe_Test_EnableGroupCmd(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppPipe_Test_EnableGroupCmd */
+}
 
 void SCH_AppPipe_Test_DisableGroupCmd(void)
 {
@@ -180,7 +180,7 @@ void SCH_AppPipe_Test_DisableGroupCmd(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppPipe_Test_DisableGroupCmd */
+}
 
 void SCH_AppPipe_Test_EnableSyncCmd(void)
 {
@@ -198,7 +198,7 @@ void SCH_AppPipe_Test_EnableSyncCmd(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppPipe_Test_EnableSyncCmd */
+}
 
 void SCH_AppPipe_Test_SendDiagTlmCmd(void)
 {
@@ -216,7 +216,7 @@ void SCH_AppPipe_Test_SendDiagTlmCmd(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_AppPipe_Test_SendDiagTlmCmd */
+}
 
 void SCH_AppPipe_Test_InvalidCommandCode(void)
 {
@@ -238,7 +238,7 @@ void SCH_AppPipe_Test_InvalidCommandCode(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_AppPipe_Test_InvalidCommandCode */
+}
 
 void SCH_AppPipe_Test_InvalidMessageID(void)
 {
@@ -258,7 +258,7 @@ void SCH_AppPipe_Test_InvalidMessageID(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_AppPipe_Test_InvalidMessageID */
+}
 
 void SCH_HousekeepingCmd_Test(void)
 {
@@ -324,7 +324,7 @@ void SCH_HousekeepingCmd_Test(void)
     UtAssert_True (Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_HousekeepingCmd_Test */
+}
 
 void SCH_NoopCmd_Test_Error(void)
 {
@@ -340,7 +340,7 @@ void SCH_NoopCmd_Test_Error(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_NoopCmd_Test_Error */
+}
 
 void SCH_NoopCmd_Test_Nominal(void)
 {
@@ -359,7 +359,7 @@ void SCH_NoopCmd_Test_Nominal(void)
     UtAssert_True (SCH_AppData.CmdCounter == 1, "SCH_AppData.CmdCounter == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_NoopCmd_Test_Nominal */
+}
 
 void SCH_ResetCmd_Test_Error(void)
 {
@@ -375,7 +375,7 @@ void SCH_ResetCmd_Test_Error(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_ResetCmd_Test_Error */
+}
 
 void SCH_ResetCmd_Test_Nominal(void)
 {
@@ -409,7 +409,7 @@ void SCH_ResetCmd_Test_Nominal(void)
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_ResetCmd_Test_Nominal */
+}
 
 void SCH_EnableCmd_Test_InvalidCmdLength(void)
 {
@@ -423,7 +423,7 @@ void SCH_EnableCmd_Test_InvalidCmdLength(void)
     /* Verify results */
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_EnableCmd_Test_InvalidCmdLength */
+}
 
 void SCH_EnableCmd_Test_InvalidArgumentSlotNumber(void)
 {
@@ -443,7 +443,7 @@ void SCH_EnableCmd_Test_InvalidArgumentSlotNumber(void)
         "ENABLE cmd: invalid argument, slot=100 (<100), entry=1 (<5)");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_EnableCmd_Test_InvalidArgumentSlotNumber */
+}
 
 void SCH_EnableCmd_Test_InvalidArgumentEntryNumber(void)
 {
@@ -463,7 +463,7 @@ void SCH_EnableCmd_Test_InvalidArgumentEntryNumber(void)
         "ENABLE cmd: invalid argument, slot=1 (<100), entry=5 (<5)");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_EnableCmd_Test_InvalidArgumentEntryNumber */
+}
 
 void SCH_EnableCmd_Test_InvalidState(void)
 {
@@ -485,7 +485,7 @@ void SCH_EnableCmd_Test_InvalidState(void)
         "ENABLE command: invalid state = 99, slot = 0, entry = 0");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_EnableCmd_Test_InvalidState */
+}
 
 void SCH_EnableCmd_Test_Nominal(void)
 {
@@ -509,7 +509,7 @@ void SCH_EnableCmd_Test_Nominal(void)
         "ENABLE command: invalid state = 99, slot = 0, entry = 0");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_EnableCmd_Test_Nominal */
+}
 
 void SCH_DisableCmd_Test_InvalidCmdLength(void)
 {
@@ -523,7 +523,7 @@ void SCH_DisableCmd_Test_InvalidCmdLength(void)
     /* Verify results */
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_DisableCmd_Test_InvalidCmdLength */
+}
 
 void SCH_DisableCmd_Test_InvalidArgumentSlotNumber(void)
 {
@@ -543,7 +543,7 @@ void SCH_DisableCmd_Test_InvalidArgumentSlotNumber(void)
         "DISABLE cmd: invalid argument, slot=100 (<100), entry=1 (<5)");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_DisableCmd_Test_InvalidArgumentSlotNumber */
+}
 
 void SCH_DisableCmd_Test_InvalidArgumentEntryNumber(void)
 {
@@ -563,7 +563,7 @@ void SCH_DisableCmd_Test_InvalidArgumentEntryNumber(void)
         "DISABLE cmd: invalid argument, slot=1 (<100), entry=5 (<5)");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_DisableCmd_Test_InvalidArgumentEntryNumber */
+}
 
 void SCH_DisableCmd_Test_InvalidState(void)
 {
@@ -585,7 +585,7 @@ void SCH_DisableCmd_Test_InvalidState(void)
         "DISABLE command: invalid state = 99, slot = 0, entry = 0");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_DisableCmd_Test_InvalidState */
+}
 
 void SCH_DisableCmd_Test_Nominal(void)
 {
@@ -609,7 +609,7 @@ void SCH_DisableCmd_Test_Nominal(void)
         "DISABLE command: invalid state = 99, slot = 0, entry = 0");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_DisableCmd_Test_Nominal */
+}
 
 void SCH_EnableGroupCmd_Test_InvalidCmdLength(void)
 {
@@ -623,7 +623,7 @@ void SCH_EnableGroupCmd_Test_InvalidCmdLength(void)
     /* Verify results */
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_EnableGroupCmd_Test_InvalidCmdLength */
+}
 
 void SCH_EnableGroupCmd_Test_InvalidArgument(void)
 {
@@ -640,7 +640,7 @@ void SCH_EnableGroupCmd_Test_InvalidArgument(void)
         "ENABLE GROUP command: invalid argument, no groups selected");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_EnableGroupCmd_Test_InvalidArgument */
+}
 
 void SCH_EnableGroupCmd_Test_NominalCmdGroupNumberNotUnused(void)
 {
@@ -664,7 +664,7 @@ void SCH_EnableGroupCmd_Test_NominalCmdGroupNumberNotUnused(void)
         "ENABLE GROUP command: match count = 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_EnableGroupCmd_Test_NominalCmdGroupNumberNotUnused */
+}
 
 void SCH_EnableGroupCmd_Test_NominalCmdMultiGroupBitwiseAndTblMultiGroupNotUnused(void)
 {
@@ -688,7 +688,7 @@ void SCH_EnableGroupCmd_Test_NominalCmdMultiGroupBitwiseAndTblMultiGroupNotUnuse
         "ENABLE GROUP command: match count = 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_EnableGroupCmd_Test_NominalCmdMultiGroupBitwiseAndTblMultiGroupNotUnused */
+}
 
 void SCH_EnableGroupCmd_Test_GroupNotFound(void)
 {
@@ -708,7 +708,7 @@ void SCH_EnableGroupCmd_Test_GroupNotFound(void)
         "ENABLE GROUP command: Neither Group 255 nor Multi-Group 0xFFFFFF found");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_EnableGroupCmd_Test_GroupNotFound */
+}
 
 void SCH_DisableGroupCmd_Test_InvalidCmdLength(void)
 {
@@ -722,7 +722,7 @@ void SCH_DisableGroupCmd_Test_InvalidCmdLength(void)
     /* Verify results */
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_DisableGroupCmd_Test_InvalidCmdLength */
+}
 
 void SCH_DisableGroupCmd_Test_InvalidArgument(void)
 {
@@ -739,7 +739,7 @@ void SCH_DisableGroupCmd_Test_InvalidArgument(void)
         "DISABLE GROUP command: invalid argument, no groups selected");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_DisableGroupCmd_Test_InvalidArgument */
+}
 
 void SCH_DisableGroupCmd_Test_NominalCmdGroupNumberNotUnused(void)
 {
@@ -763,7 +763,7 @@ void SCH_DisableGroupCmd_Test_NominalCmdGroupNumberNotUnused(void)
         "DISABLE GROUP command: match count = 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_DisableGroupCmd_Test_NominalCmdGroupNumberNotUnused */
+}
 
 void SCH_DisableGroupCmd_Test_NominalCmdMultiGroupBitwiseAndTblMultiGroupNotUnused(void)
 {
@@ -787,7 +787,7 @@ void SCH_DisableGroupCmd_Test_NominalCmdMultiGroupBitwiseAndTblMultiGroupNotUnus
         "DISABLE GROUP command: match count = 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_DisableGroupCmd_Test_NominalCmdMultiGroupBitwiseAndTblMultiGroupNotUnused */
+}
 
 void SCH_DisableGroupCmd_Test_GroupNotFound(void)
 {
@@ -807,7 +807,7 @@ void SCH_DisableGroupCmd_Test_GroupNotFound(void)
         "DISABLE GROUP command: Neither Group 255 nor Multi-Group 0xFFFFFF found");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_DisableGroupCmd_Test_GroupNotFound */
+}
 
 void SCH_EnableSyncCmd_Test_InvalidCmdLength(void)
 {
@@ -821,7 +821,7 @@ void SCH_EnableSyncCmd_Test_InvalidCmdLength(void)
     /* Verify results */
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_EnableSyncCmd_Test_InvalidCmdLength */
+}
 
 void SCH_EnableSyncCmd_Test_Nominal(void)
 {
@@ -842,7 +842,7 @@ void SCH_EnableSyncCmd_Test_Nominal(void)
         "Major Frame Synchronization Enabled");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_EnableSyncCmd_Test_Nominal */
+}
 
 void SCH_SendDiagTlmCmd_Test_InvalidCmdLength(void)
 {
@@ -856,7 +856,7 @@ void SCH_SendDiagTlmCmd_Test_InvalidCmdLength(void)
     /* Verify results */
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
     /* Generates 1 event message we don't care about in this test */
-} /* end SCH_SendDiagTlmCmd_Test_InvalidCmdLength */
+}
 
 void SCH_SendDiagTlmCmd_Test_Enabled(void)
 {
@@ -877,7 +877,7 @@ void SCH_SendDiagTlmCmd_Test_Enabled(void)
         "Transmitting Diagnostic Message");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_SendDiagTlmCmd_Test_Enabled */
+}
 
 void SCH_SendDiagTlmCmd_Test_Disabled(void)
 {
@@ -898,7 +898,7 @@ void SCH_SendDiagTlmCmd_Test_Disabled(void)
         "Transmitting Diagnostic Message");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_SendDiagTlmCmd_Test_Disabled */
+}
 
 void SCH_SendDiagTlmCmd_Test_Other(void)
 {
@@ -920,7 +920,7 @@ void SCH_SendDiagTlmCmd_Test_Other(void)
         "Transmitting Diagnostic Message");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_SendDiagTlmCmd_Test_Other */
+}
 
 void SCH_AcquirePointers_Test_AllResultsGreaterThanSuccess(void)
 {
@@ -937,7 +937,7 @@ void SCH_AcquirePointers_Test_AllResultsGreaterThanSuccess(void)
     UtAssert_True(Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_AcquirePointers_Test_AllResultsGreaterThanSuccess */
+}
 
 void SCH_AcquirePointers_Test_AllResultsSuccess(void)
 {
@@ -954,7 +954,7 @@ void SCH_AcquirePointers_Test_AllResultsSuccess(void)
     UtAssert_True(Result == CFE_SUCCESS, "Result == CFE_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_AcquirePointers_Test_AllResultsSuccess */
+}
 
 void SCH_AcquirePointers_Test_Result1LessThanSuccess(void)
 {
@@ -970,7 +970,7 @@ void SCH_AcquirePointers_Test_Result1LessThanSuccess(void)
     UtAssert_True(Result == -1, "Result == -1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_AcquirePointers_Test_Result1LessThanSuccess */
+}
 
 void SCH_VerifyCmdLength_Test_LengthError(void)
 {
@@ -991,7 +991,7 @@ void SCH_VerifyCmdLength_Test_LengthError(void)
     UtAssert_True(Result == SCH_BAD_MSG_LENGTH_RC, "Result == SCH_BAD_MSG_LENGTH_RC");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 1, "Ut_CFE_EVS_GetEventQueueDepth() == 1");
-} /* end SCH_VerifyCmdLength_Test_LengthError */
+}
 
 void SCH_VerifyCmdLength_Test_Success(void)
 {
@@ -1008,7 +1008,7 @@ void SCH_VerifyCmdLength_Test_Success(void)
     UtAssert_True(Result == SCH_SUCCESS, "Result == SCH_SUCCESS");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_VerifyCmdLength_Test_Success */
+}
 
 void SCH_PostCommandResult_Test_GoodCommand(void)
 {
@@ -1021,7 +1021,7 @@ void SCH_PostCommandResult_Test_GoodCommand(void)
     UtAssert_True(SCH_AppData.CmdCounter == 1, "SCH_AppData.CmdCounter == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_PostCommandResult_Test_GoodCommand */
+}
 
 void SCH_PostCommandResult_Test_Error(void)
 {
@@ -1034,7 +1034,7 @@ void SCH_PostCommandResult_Test_Error(void)
     UtAssert_True(SCH_AppData.ErrCounter == 1, "SCH_AppData.ErrCounter == 1");
 
     UtAssert_True (Ut_CFE_EVS_GetEventQueueDepth() == 0, "Ut_CFE_EVS_GetEventQueueDepth() == 0");
-} /* end SCH_PostCommandResult_Test_Error */
+}
 
 void SCH_Cmds_Test_AddTestCases(void)
 {
@@ -1099,8 +1099,4 @@ void SCH_Cmds_Test_AddTestCases(void)
 
     UtTest_Add(SCH_PostCommandResult_Test_GoodCommand, SCH_Test_Setup, SCH_Test_TearDown, "SCH_PostCommandResult_Test_GoodCommand");
     UtTest_Add(SCH_PostCommandResult_Test_Error, SCH_Test_Setup, SCH_Test_TearDown, "SCH_PostCommandResult_Test_Error");
-} /* end SCH_Cmds_Test_AddTestCases */
-
-/************************/
-/*  End of File Comment */
-/************************/
+}

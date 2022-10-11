@@ -852,8 +852,3 @@ CFE_TBL_FILEDEF(SCH_DefaultScheduleTable, SCH.SCHED_DEF, SCH schedule table, sch
 /*
 ** (none)
 */
-
-/************************/
-/*  End of File Comment */
-/************************/
-

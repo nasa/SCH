@@ -485,7 +485,3 @@ int32 SCH_ValidateScheduleData(void *TableData);
 int32 SCH_ValidateMessageData(void *TableData);
 
 #endif /* _sch_app_ */
-
-/************************/
-/*  End of File Comment */
-/************************/

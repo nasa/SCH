@@ -167,7 +167,3 @@ void Ut_CFE_TIME_SetReturnCode(uint32 Index, int32 RtnVal, uint32 CallCnt);
 void Ut_CFE_TIME_ContinueReturnCodeAfterCountZero(uint32 Index);
 
 /* end ut_cfe_time_stubs */
-
-/************************/
-/*  End of File Comment */
-/************************/

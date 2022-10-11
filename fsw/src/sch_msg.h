@@ -242,8 +242,3 @@ typedef struct
 } SCH_DiagPacket_t;
 
 #endif /* _sch_msg_ */
-
-/************************/
-/*  End of File Comment */
-/************************/
-

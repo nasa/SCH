@@ -314,7 +314,3 @@ void SCH_PostCommandResult(boolean GoodCommand);
 int32 SCH_VerifyCmdLength (CFE_SB_MsgPtr_t MessagePtr, uint32 ExpectedLength);
 
 #endif /* _sch_cmds_ */
-
-/************************/
-/*  End of File Comment */
-/************************/
