@@ -113,9 +113,6 @@ SCH_AppData_t           SCH_AppData;
 **************************************************************************/
 
 /*******************************************************************
-**
-** SCH_AppMain
-**
 ** NOTE: For complete prolog information, see 'sch_app.h'
 ********************************************************************/
 
@@ -231,7 +228,6 @@ void SCH_AppMain(void)
             */
             RunStatus = CFE_ES_APP_ERROR;
         }
-
     } /* End of while */
 
     /*
@@ -269,9 +265,6 @@ void SCH_AppMain(void)
 
 
 /*******************************************************************
-**
-** SCH_AppInit
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -354,9 +347,6 @@ int32 SCH_AppInit(void)
 
 
 /*******************************************************************
-**
-** SCH_EvsInit
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -393,9 +383,6 @@ int32 SCH_EvsInit(void)
 
 
 /*******************************************************************
-**
-** SCH_SbInit
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -456,9 +443,6 @@ int32 SCH_SbInit(void)
 
 
 /*******************************************************************
-**
-** SCH_TblInit
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -568,9 +552,6 @@ int32 SCH_TblInit(void)
 
 
 /*******************************************************************
-**
-** SCH_TimerInit
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -647,9 +628,6 @@ int32 SCH_TimerInit(void)
 
 
 /*******************************************************************
-**
-** SCH_ProcessScheduleTable
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -807,9 +785,6 @@ int32 SCH_ProcessScheduleTable(void)
 
 
 /*******************************************************************
-**
-** SCH_ProcessNextSlot
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -868,9 +843,6 @@ int32 SCH_ProcessNextSlot(void)
 
 
 /*******************************************************************
-**
-** SCH_ProcessNextEntry
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -961,9 +933,6 @@ void SCH_ProcessNextEntry(SCH_ScheduleEntry_t *NextEntry, int32 EntryNumber)
 
 
 /*******************************************************************
-**
-** SCH_ProcessCommands
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -997,9 +966,6 @@ int32 SCH_ProcessCommands(void)
 
 
 /*******************************************************************
-**
-** SCH_ValidateScheduleData
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -1137,9 +1103,6 @@ int32 SCH_ValidateScheduleData(void *TableData)
 
 
 /*******************************************************************
-**
-** SCH_ValidateMessageData
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 

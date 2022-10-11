@@ -54,9 +54,6 @@
 
 
 /*******************************************************************
-**
-** SCH_CustomEarlyInit
-**
 ** NOTE: For complete prolog information, see 'sch_custom.h'
 **
 ** This function MUST update SCH_AppData.ClockAccuracy to the
@@ -77,9 +74,6 @@ int32 SCH_CustomEarlyInit(void)
 
 
 /*******************************************************************
-**
-** SCH_CustomLateInit
-**
 ** NOTE: For complete prolog information, see 'sch_custom.h'
 **
 ** This function MUST perform any startup synchronization required,
@@ -112,9 +106,6 @@ int32 SCH_CustomLateInit(void)
 
 
 /*******************************************************************
-**
-** SCH_CustomGetCurrentSlotNumber
-**
 ** NOTE: For complete prolog information, see 'sch_custom.h'
 ********************************************************************/
 
@@ -151,9 +142,6 @@ uint32 SCH_CustomGetCurrentSlotNumber(void)
 } /* End of SH_CustomGetCurrentSlotNumber() */
 
 /*******************************************************************
-**
-** SCH_CustomCleanup
-**
 ** NOTE: For complete prolog information, see 'sch_custom.h'
 ********************************************************************/
 
@@ -165,9 +153,6 @@ void SCH_CustomCleanup(void)
 
 
 /*******************************************************************
-**
-** SCH_GetMETSlotNumber
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -217,9 +202,6 @@ uint32 SCH_GetMETSlotNumber(void)
 
 
 /*******************************************************************
-**
-** SCH_MajorFrameCallback
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -335,9 +317,6 @@ void SCH_MajorFrameCallback(void)
 
 
 /*******************************************************************
-**
-** SCH_MinorFrameCallback
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 

@@ -35,7 +35,7 @@ SCH_LibData_t SCH_LibData;
 
 /*******************************************************************
 **
-** SCH_LibInit() -- Initializes the SCH Library
+** Initializes the SCH Library
 **
 ** NOTE: For complete prolog information, see 'sch_apipriv.h'.
 ********************************************************************/
@@ -47,7 +47,7 @@ int32 SCH_LibInit(void)
 
 /*******************************************************************
 **
-** SCH_EnableProcessing() -- Enables SCH schedule processing
+** Enables SCH schedule processing
 **
 ** NOTE: For complete prolog information, see 'sch_api.h'.
 ********************************************************************/
@@ -62,7 +62,7 @@ void SCH_EnableProcessing(void)
 
 /*******************************************************************
 **
-** SCH_DisableProcessing() -- Disables SCH schedule processing
+** Disables SCH schedule processing
 **
 ** NOTE: For complete prolog information, see 'sch_api.h'.
 ********************************************************************/
@@ -74,8 +74,7 @@ void SCH_DisableProcessing(void)
 
 /*******************************************************************
 **
-** SCH_GetProcessingState() -- Obtains the current SCH schedule
-**                             table processing state
+** Obtains the current SCH schedule table processing state
 **
 ** NOTE: For complete prolog information, see 'sch_api.h'.
 ********************************************************************/

@@ -57,9 +57,6 @@ extern SCH_AppData_t           SCH_AppData;
 */
 
 /*******************************************************************
-**
-** SCH_AppPipe
-**
 ** NOTE: For complete prolog information, see 'sch_cmds.h'
 ********************************************************************/
 
@@ -147,9 +144,6 @@ int32 SCH_AppPipe(CFE_SB_MsgPtr_t MessagePtr)
 
 
 /*******************************************************************
-**
-** SCH_HousekeepingCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -218,9 +212,6 @@ int32 SCH_HousekeepingCmd(CFE_SB_MsgPtr_t MessagePtr)
 
 
 /*******************************************************************
-**
-** SCH_NoopCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -250,9 +241,6 @@ void SCH_NoopCmd(CFE_SB_MsgPtr_t MessagePtr)
 
 
 /*******************************************************************
-**
-** SCH_ResetCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -295,9 +283,6 @@ void SCH_ResetCmd(CFE_SB_MsgPtr_t MessagePtr)
 
 
 /*******************************************************************
-**
-** SCH_EnableCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -364,9 +349,6 @@ void SCH_EnableCmd(CFE_SB_MsgPtr_t MessagePtr)
 
 
 /*******************************************************************
-**
-** SCH_DisableCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -433,9 +415,6 @@ void SCH_DisableCmd(CFE_SB_MsgPtr_t MessagePtr)
 
 
 /*******************************************************************
-**
-** SCH_EnableGroupCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -523,9 +502,6 @@ void SCH_EnableGroupCmd(CFE_SB_MsgPtr_t MessagePtr)
 
 
 /*******************************************************************
-**
-** SCH_DisableGroupCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -613,9 +589,6 @@ void SCH_DisableGroupCmd(CFE_SB_MsgPtr_t MessagePtr)
 
 
 /*******************************************************************
-**
-** SCH_EnableSyncCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -644,9 +617,6 @@ void SCH_EnableSyncCmd(CFE_SB_MsgPtr_t MessagePtr)
 
 
 /*******************************************************************
-**
-** SCH_SendDiagTlmCmd
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -705,9 +675,6 @@ void SCH_SendDiagTlmCmd(CFE_SB_MsgPtr_t MessagePtr)
 
 
 /*******************************************************************
-**
-** SCH_AcquirePointers
-**
 ** NOTE: For complete prolog information, see 'sch_cmds.h'
 ********************************************************************/
 
@@ -753,9 +720,6 @@ int32 SCH_AcquirePointers(void)
 
 
 /*******************************************************************
-**
-** SCH_VerifyCmdLength
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
@@ -785,9 +749,6 @@ int32 SCH_VerifyCmdLength (CFE_SB_MsgPtr_t MessagePtr, uint32 ExpectedLength)
 
 
 /*******************************************************************
-**
-** SCH_PostCommandResult
-**
 ** NOTE: For complete prolog information, see above
 ********************************************************************/
 
