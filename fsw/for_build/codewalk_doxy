@@ -95,8 +95,7 @@ WARN_LOGFILE           =
 INPUT                  = $(CFS_APP_SRC)/$(APPTARGET)/docs/dox_src/detailed_design/cfs_$(APPTARGET).dox
 #INPUT                 += $(CFS_APP_SRC)/$(APPTARGET)/fsw/public_inc 
 INPUT                 += $(CFS_APP_SRC)/$(APPTARGET)/fsw/src
-INPUT                 += $(CFS_APP_SRC)/$(APPTARGET)/fsw/mission_inc
-INPUT                 += $(CFS_APP_SRC)/$(APPTARGET)/fsw/platform_inc 
+INPUT                 += $(CFS_APP_SRC)/$(APPTARGET)/fsw/inc
 #INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          = *.c \
                          *.h
