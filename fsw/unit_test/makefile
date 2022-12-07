@@ -57,9 +57,7 @@ INCLUDES += -I$(PSP_DIR)/fsw/inc
 INCLUDES += -I$(PSP_DIR)/fsw/pc-linux/inc
 INCLUDES += -I$(PSP_DIR)/fsw/pc-linux/inc
 INCLUDES += -I$(SCH_PATH)/fsw/src
-INCLUDES += -I$(SCH_PATH)/fsw/mission_inc
-INCLUDES += -I$(SCH_PATH)/fsw/platform_inc
-INCLUDES += -I$(SCH_PATH)/fsw/public_inc
+INCLUDES += -I$(SCH_PATH)/fsw/inc
 
 #
 # FLIGHT_OBJS specifies flight software object files.
