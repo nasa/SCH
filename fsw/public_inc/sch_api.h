@@ -82,7 +82,7 @@ void SCH_DisableProcessing(void);
 **
 **
 ******************************************************************************/
-boolean SCH_GetProcessingState(void);
+bool SCH_GetProcessingState(void);
 
 #endif /* _sch_api_ */
 

@@ -76,18 +76,18 @@
 **  \sa #CFE_SB_RcvMsg
 **
 *************************************************************************/
-int32 SCH_AppPipe(CFE_SB_MsgPtr_t MessagePtr);
+int32 SCH_AppPipe(CFE_SB_Buffer_t *MessagePtr);
 
 /************************************************************************/
 /** \brief Manages Scheduler's Schedule and Message Definition Tables
-**  
+**
 **  \par Description
 **       This function manages the contents of the Schedule and Message
 **       Definition Tables.
 **
 **  \par Assumptions, External Events, and Notes:
 **       None
-**       
+**
 **  \returns
 **  \retcode #CFE_SUCCESS  \retdesc \copydoc CFE_SUCCESS \endcode
 **  \retstmt Return codes from #CFE_EVS_Register         \endcode
@@ -100,16 +100,16 @@ int32 SCH_AcquirePointers(void);
 
 /************************************************************************/
 /** \brief Process housekeeping request
-**  
+**
 **  \par Description
 **       Processes an on-board housekeeping request message.
 **
 **  \par Assumptions, External Events, and Notes:
 **       This command does not affect the command execution counter
-**       
-**  \param [in]   MessagePtr   A #CFE_SB_MsgPtr_t pointer that
-**                             references the software bus message 
-**       
+**
+**  \param [in]   MessagePtr   A #CFE_SB_MsgId_t pointer that
+**                             references the software bus message
+**
 **  \returns
 **  \retcode #CFE_SUCCESS  \retdesc \copydoc CFE_SUCCESS \endcode
 **  \retstmt Return codes from #CFE_EVS_Register         \endcode
@@ -118,31 +118,31 @@ int32 SCH_AcquirePointers(void);
 **  \endreturns
 **
 *************************************************************************/
-int32 SCH_HousekeepingCmd(CFE_SB_MsgPtr_t MessagePtr);
+int32 SCH_HousekeepingCmd(CFE_MSG_Message_t *MessagePtr);
 
 /*
 ** Application command handlers
 */
 /************************************************************************/
 /** \brief Process noop command
-**  
+**
 **  \par Description
 **       Processes a noop ground command.
 **
 **  \par Assumptions, External Events, and Notes:
 **       None
-**       
-**  \param [in]   MessagePtr   A #CFE_SB_MsgPtr_t pointer that
-**                             references the software bus message 
+**
+**  \param [in]   MessagePtr   A #CFE_SB_MsgId_t pointer that
+**                             references the software bus message
 **
 **  \sa #SCH_NOOP_CC
 **
 *************************************************************************/
-void SCH_NoopCmd(CFE_SB_MsgPtr_t MessagePtr);
+void SCH_NoopCmd(CFE_MSG_Message_t *MessagePtr);
 
 /************************************************************************/
 /** \brief Process reset counters command
-**  
+**
 **  \par Description
 **       Processes a reset counters ground command which will reset
 **       the Scheduler commmand error, command execution and performance
@@ -150,90 +150,90 @@ void SCH_NoopCmd(CFE_SB_MsgPtr_t MessagePtr);
 **
 **  \par Assumptions, External Events, and Notes:
 **       None
-**       
-**  \param [in]   MessagePtr   A #CFE_SB_MsgPtr_t pointer that
-**                             references the software bus message 
+**
+**  \param [in]   MessagePtr   A #CFE_SB_MsgId_t pointer that
+**                             references the software bus message
 **
 **  \sa #SCH_RESET_CC
 **
 *************************************************************************/
-void SCH_ResetCmd(CFE_SB_MsgPtr_t MessagePtr);
+void SCH_ResetCmd(CFE_MSG_Message_t *MessagePtr);
 
 /************************************************************************/
 /** \brief Enable a Single Activity Command
-**  
+**
 **  \par Description
-**       Command to Enable a specific activity in the Schedule 
+**       Command to Enable a specific activity in the Schedule
 **       Definition Table.
 **
 **  \par Assumptions, External Events, and Notes:
 **       None
-**       
-**  \param [in]   MessagePtr     A #CFE_SB_MsgPtr_t pointer that
-**                               references the software bus message 
-**       
+**
+**  \param [in]   MessagePtr     A #CFE_SB_MsgId_t pointer that
+**                               references the software bus message
+**
 **  \sa #SCH_ENABLE_CC, #SCH_DISABLE_CC, #SCH_ENABLE_GROUP_CC, #SCH_DISABLE_GROUP_CC
 **
 *************************************************************************/
-void SCH_EnableCmd(CFE_SB_MsgPtr_t MessagePtr);
+void SCH_EnableCmd(CFE_MSG_Message_t *MessagePtr);
 
 /************************************************************************/
 /** \brief Disable a Single Activity Command
-**  
+**
 **  \par Description
-**       Command to Disable a specific activity in the Schedule 
+**       Command to Disable a specific activity in the Schedule
 **       Definition Table.
 **
 **  \par Assumptions, External Events, and Notes:
 **       None
-**       
-**  \param [in]   MessagePtr     A #CFE_SB_MsgPtr_t pointer that
-**                               references the software bus message 
-**       
+**
+**  \param [in]   MessagePtr     A #CFE_SB_MsgId_t pointer that
+**                               references the software bus message
+**
 **  \sa #SCH_ENABLE_CC, #SCH_DISABLE_CC, #SCH_ENABLE_GROUP_CC, #SCH_DISABLE_GROUP_CC
 **
 *************************************************************************/
-void SCH_DisableCmd(CFE_SB_MsgPtr_t MessagePtr);
+void SCH_DisableCmd(CFE_MSG_Message_t *MessagePtr);
 
 /************************************************************************/
 /** \brief Enable a Group and/or Multi-Group(s) Command
-**  
+**
 **  \par Description
 **       Command to Enable a single Group and/or one or more Multi-Groups
 **       of activities.
 **
 **  \par Assumptions, External Events, and Notes:
 **       None
-**       
-**  \param [in]   MessagePtr     A #CFE_SB_MsgPtr_t pointer that
-**                               references the software bus message 
-**       
+**
+**  \param [in]   MessagePtr     A #CFE_SB_MsgId_t pointer that
+**                               references the software bus message
+**
 **  \sa #SCH_ENABLE_CC, #SCH_DISABLE_CC, #SCH_ENABLE_GROUP_CC, #SCH_DISABLE_GROUP_CC
 **
 *************************************************************************/
-void SCH_EnableGroupCmd(CFE_SB_MsgPtr_t MessagePtr);
+void SCH_EnableGroupCmd(CFE_MSG_Message_t *MessagePtr);
 
 /************************************************************************/
 /** \brief Disable a Group and/or Multi-Group(s) Command
-**  
+**
 **  \par Description
 **       Command to Disable a single Group and/or one or more Multi-Groups
 **       of activities.
 **
 **  \par Assumptions, External Events, and Notes:
 **       None
-**       
-**  \param [in]   MessagePtr     A #CFE_SB_MsgPtr_t pointer that
-**                               references the software bus message 
-**       
+**
+**  \param [in]   MessagePtr     A #CFE_SB_MsgId_t pointer that
+**                               references the software bus message
+**
 **  \sa #SCH_ENABLE_CC, #SCH_DISABLE_CC, #SCH_ENABLE_GROUP_CC, #SCH_DISABLE_GROUP_CC
 **
 *************************************************************************/
-void SCH_DisableGroupCmd(CFE_SB_MsgPtr_t MessagePtr);
+void SCH_DisableGroupCmd(CFE_MSG_Message_t *MessagePtr);
 
 /************************************************************************/
 /** \brief Enables Major Frame Synchronization
-**  
+**
 **  \par Description
 **       Command to enable synchronization of Schedule Definition Table to
 **       the Major Frame Sync signal.  The synchronization can become
@@ -241,33 +241,33 @@ void SCH_DisableGroupCmd(CFE_SB_MsgPtr_t MessagePtr);
 **
 **  \par Assumptions, External Events, and Notes:
 **       None
-**       
-**  \param [in]   MessagePtr     A #CFE_SB_MsgPtr_t pointer that
-**                               references the software bus message 
-**       
+**
+**  \param [in]   MessagePtr     A #CFE_SB_MsgId_t pointer that
+**                               references the software bus message
+**
 **  \sa #SCH_ENABLE_CC, #SCH_DISABLE_CC, #SCH_ENABLE_GROUP_CC, #SCH_DISABLE_GROUP_CC
 **
 *************************************************************************/
-void SCH_EnableSyncCmd(CFE_SB_MsgPtr_t MessagePtr);
+void SCH_EnableSyncCmd(CFE_MSG_Message_t *MessagePtr);
 
 /************************************************************************/
 /** \brief Creates and sends diagnostic message packet
-**  
+**
 **  \par Description
 **       Command to send the Scheduler diagnostic message.
 **
 **  \par Assumptions, External Events, and Notes:
 **       None
-**       
-**  \param [in]   MessagePtr     A #CFE_SB_MsgPtr_t pointer that
-**                               references the software bus message 
-**       
+**
+**  \param [in]   MessagePtr     A #CFE_SB_MsgId_t pointer that
+**                               references the software bus message
+**
 *************************************************************************/
-void SCH_SendDiagTlmCmd(CFE_SB_MsgPtr_t MessagePtr);
+void SCH_SendDiagTlmCmd(CFE_MSG_Message_t *MessagePtr);
 
 /************************************************************************/
 /** \brief Updates appropriate command counters following command execution
-**  
+**
 **  \par Description
 **       This function updates the ground or on-board command counter or
 **       command error counter depending upon the success of the command
@@ -275,17 +275,17 @@ void SCH_SendDiagTlmCmd(CFE_SB_MsgPtr_t MessagePtr);
 **
 **  \par Assumptions, External Events, and Notes:
 **       None
-**       
+**
 **  \param [in]   GoodCommand    Indicates the command was successfully
 **                               performed (=TRUE) or contained an error
-**                               (=FALSE). 
-**       
+**                               (=FALSE).
+**
 *************************************************************************/
-void SCH_PostCommandResult(boolean GoodCommand);
+void SCH_PostCommandResult(bool GoodCommand);
 
 /************************************************************************/
 /** \brief Verifies the length of the specified message
-**  
+**
 **  \par Description
 **       This function determines whether the specified message is of the
 **       specified expected length.  If not, an event message is generated
@@ -295,14 +295,14 @@ void SCH_PostCommandResult(boolean GoodCommand);
 **
 **  \par Assumptions, External Events, and Notes:
 **       None
-**       
-**       
-**  \param [in]   MessagePtr     A #CFE_SB_MsgPtr_t pointer that
-**                               references the software bus message 
-**       
+**
+**
+**  \param [in]   MessagePtr     A #CFE_SB_MsgId_t pointer that
+**                               references the software bus message
+**
 **  \param [in]   ExpectedLength The size, in bytes, that the specified
-**                               message should be equal to. 
-**       
+**                               message should be equal to.
+**
 **  \returns
 **  \retcode #CFE_SUCCESS  \retdesc \copydoc CFE_SUCCESS \endcode
 **  \retstmt Return codes from #CFE_EVS_Register         \endcode
@@ -311,7 +311,7 @@ void SCH_PostCommandResult(boolean GoodCommand);
 **  \endreturns
 **
 *************************************************************************/
-int32 SCH_VerifyCmdLength (CFE_SB_MsgPtr_t MessagePtr, uint32 ExpectedLength);
+int32 SCH_VerifyCmdLength(CFE_MSG_Message_t *MessagePtr, uint32 ExpectedLength);
 
 #endif /* _sch_cmds_ */
 
