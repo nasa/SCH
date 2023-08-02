@@ -94,10 +94,11 @@
 **       Dictates the maximum message ID that can be used in the Message Definition Table.
 **
 **  \par Limits
-**       Must be less than or equal to #CFE_SB_HIGHEST_VALID_MSGID and greater than SCH_MDT_MIN_MSG_ID
+**       Must be less than or equal to #CFE_PLATFORM_SB_HIGHEST_VALID_MSGID and greater than
+*SCH_MDT_MIN_MSG_ID
 */
-#define SCH_MDT_MAX_MSG_ID    CFE_SB_HIGHEST_VALID_MSGID
 
+#define SCH_MDT_MAX_MSG_ID CFE_PLATFORM_SB_HIGHEST_VALID_MSGID
 
 /**
 **  \schcfg Maximum Length, in Words, of a Message 

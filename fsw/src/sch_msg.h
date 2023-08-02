@@ -54,8 +54,7 @@
 */
 typedef struct
 {
-    uint8             CmdHeader[CFE_SB_CMD_HDR_SIZE];  /**< \brief cFE Software Bus Command Message Header */
-
+    CFE_MSG_CommandHeader_t CmdHeader;
 } SCH_NoArgsCmd_t;
 
 /*
@@ -68,13 +67,12 @@ typedef struct
 */
 typedef struct
 {
-    uint8    CmdHeader[CFE_SB_CMD_HDR_SIZE];          /**< \brief cFE Software Bus Command Message Header */
+    CFE_MSG_CommandHeader_t CmdHeader;
 
-    uint16   SlotNumber;                              /**< \brief Slot Number of Activity whose state is to change */
-                                                      /**< \details Valid Range is zero to (#SCH_TOTAL_SLOTS - 1) */
-    uint16   EntryNumber;                             /**< \brief Entry Number of Activity whose state is to change
-                                                           \details Valid Range is zero to (#SCH_ENTRIES_PER_SLOT - 1) */
-
+    uint16 SlotNumber;  /**< \brief Slot Number of Activity whose state is to change */
+                        /**< \details Valid Range is zero to (#SCH_TOTAL_SLOTS - 1) */
+    uint16 EntryNumber; /**< \brief Entry Number of Activity whose state is to change
+                             \details Valid Range is zero to (#SCH_ENTRIES_PER_SLOT - 1) */
 } SCH_EntryCmd_t;
 
 /*
@@ -87,7 +85,7 @@ typedef struct
 */
 typedef struct
 {
-    uint8    CmdHeader[CFE_SB_CMD_HDR_SIZE];          /**< \brief cFE Software Bus Command Message Header */
+    CFE_MSG_CommandHeader_t CmdHeader;
 
     uint32   GroupData;                               /**< \brief Group and Multi-Group Identifiers
                                                            \details Most Significant Byte contains a Group ID of 1 to 255,
@@ -107,7 +105,7 @@ typedef struct
 
 typedef struct
 {
-    uint8    TlmHeader[CFE_SB_TLM_HDR_SIZE];          /**< \brief cFE Software Bus Telemetry Message Header */
+    CFE_MSG_TelemetryHeader_t TlmHeader;
 
     /*
     ** Command execution counters (ground commands)
@@ -229,7 +227,7 @@ typedef struct
 
 typedef struct
 {
-    uint8           TlmHeader[CFE_SB_TLM_HDR_SIZE];   /**< \brief cFE Software Bus Telemetry Message Header */
+    CFE_MSG_TelemetryHeader_t TlmHeader;              /**< \brief cFE Software Bus Telemetry Message Header */
 
     uint16          EntryStates[SCH_NUM_STATUS_BYTES_REQD/2]; 
                                                       /**< \schtlmmnemonic \SCH_ENTRYSTATES

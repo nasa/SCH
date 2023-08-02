@@ -137,7 +137,7 @@ typedef struct
     /*
     ** Operational data 
     */
-    CFE_SB_MsgPtr_t       MsgPtr;                         /**< \brief Ptr to most recently received cmd message */
+    CFE_SB_Buffer_t       *MsgPtr;                        /**< \brief Ptr to most recently received cmd message */
     CFE_SB_PipeId_t       CmdPipe;                        /**< \brief Pipe ID for SCH Command Pipe */
     
     SCH_MessageEntry_t   *MessageTable;                   /**< \brief Ptr to Message Table contents */
